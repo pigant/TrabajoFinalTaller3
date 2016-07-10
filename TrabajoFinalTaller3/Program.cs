@@ -16,7 +16,7 @@ namespace TrabajoFinalTaller3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form f = new Form1();
+            Form f = new Sistema();
             Application.Run(f);
         }
     }
