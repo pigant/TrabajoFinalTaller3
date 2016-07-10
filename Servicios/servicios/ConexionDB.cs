@@ -35,16 +35,35 @@ namespace Servicios.servicios
             }
         }
 
+        public void Ejecutar(Action<String> f, String parametro)
+        {
+            try
+            {
+                Conectar();
+                f(parametro);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
         public void EjecutarScript(String url)
+        {
+            Action<String> funcion = _EjecutarScript;
+            funcion(url);
+        }
+
+        private void _EjecutarScript(String url)
         {
             string script = File.ReadAllText(url);
 
             // split script on GO command
             IEnumerable<string> commandStrings = Regex.Split(script, @"\r\nGO(\r\n|$)",
                                      RegexOptions.Multiline | RegexOptions.IgnoreCase);
-            try
-            {
-                Conectar();
                 foreach (string commandString in commandStrings)
                 {
                     if (commandString.Trim() != "")
@@ -57,14 +76,6 @@ namespace Servicios.servicios
                     }
                 }
                 Console.WriteLine("Se termino de ejecutar el script");
-            }catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Desconectar();
-            }
         }
     }
 }
