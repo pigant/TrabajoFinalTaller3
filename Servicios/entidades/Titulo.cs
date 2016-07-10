@@ -20,6 +20,7 @@ namespace Servicios.entidades
         private String comentarios;
         private int evaluacion;
         private String ubicacion;
+        private int cantidad;
         #endregion
 
         /**********************************************************/
@@ -31,7 +32,7 @@ namespace Servicios.entidades
 
         }
 
-        public Titulo(String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion)
+        public Titulo(String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
         {
             NombreTitulo = titulo;
             IdClase = idClase;
@@ -40,9 +41,10 @@ namespace Servicios.entidades
             Comentarios = comentarios;
             Evaluacion = evaluacion;
             Ubicacion = ubicacion;
+            Cantidad = cantidad;
         }
 
-        public Titulo(Int32 id, String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion)
+        public Titulo(Int32 id, String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
         {
             IdTitulo = idTitulo;
             NombreTitulo = titulo;
@@ -52,6 +54,7 @@ namespace Servicios.entidades
             Comentarios = comentarios;
             Evaluacion = evaluacion;
             Ubicacion = ubicacion;
+            Cantidad = cantidad;
         }
 
         #endregion
@@ -169,7 +172,20 @@ namespace Servicios.entidades
                 idTitulo = value;
             }
         }
-        #endregion        
+
+        public int Cantidad
+        {
+            get
+            {
+                return cantidad;
+            }
+
+            set
+            {
+                cantidad = value;
+            }
+        }
+        #endregion
 
     }
 }

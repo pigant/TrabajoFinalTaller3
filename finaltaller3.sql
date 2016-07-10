@@ -15,6 +15,8 @@ CREATE TABLE [titulo] (
 
 [ubicacion] varchar(50) NULL,
 
+[cantidad] int NULL,
+
 [id_tipo] int NULL,
 
 [id_clase] int NULL,
@@ -27,7 +29,7 @@ GO
 
 
 
-CREATE TABLE [idiomas] (
+CREATE TABLE [idioma] (
 
 [id_idioma] int identity(1,1) NOT NULL,
 
@@ -85,7 +87,7 @@ CREATE TABLE [titulo_idioma_aud] (
 
 [id_titulo] int identity(1,1) NOT NULL,
 
-[id_idiomas] int NULL
+[id_idioma] int NULL
 
 )
 
@@ -97,7 +99,7 @@ CREATE TABLE [titulo_idioma_sub] (
 
 [id_titulo] int identity(1,1) NOT NULL,
 
-[id_idiomas] int NULL
+[id_idioma] int NULL
 
 )
 
@@ -119,7 +121,7 @@ GO
 
 
 
-ALTER TABLE [titulo_idioma_aud] ADD CONSTRAINT [fk_idiomas_aud] FOREIGN KEY ([id_idiomas]) REFERENCES [idiomas] ([id_idioma])
+ALTER TABLE [titulo_idioma_aud] ADD CONSTRAINT [fk_idioma_aud] FOREIGN KEY ([id_idioma]) REFERENCES [idioma] ([id_idioma])
 
 GO
 
@@ -147,14 +149,24 @@ ALTER TABLE [titulo_categoria] ADD CONSTRAINT [fk_categoria_ti_categ] FOREIGN KE
 
 GO
 
-ALTER TABLE [titulo_idioma_sub] ADD CONSTRAINT [fk_idiomas_sub] FOREIGN KEY ([id_idiomas]) REFERENCES [idiomas] ([id_idioma])
+ALTER TABLE [titulo_idioma_sub] ADD CONSTRAINT [fk_idioma_sub] FOREIGN KEY ([id_idioma]) REFERENCES [idioma] ([id_idioma])
 
 GO
 
 
-insert into idiomas (nombre) values ('Inglés'),('Español'),('Japonés'),('Chino'),('Alemán');
+insert into idioma (nombre) values ('Inglés'),('Español'),('Japonés'),('Chino'),('Alemán');
 
 GO
 
+insert into categoria (nombre) values ('Ficción'),('Aventura'),('Drama');
+
+GO
+
+insert into clase (nombre) values ('Animada'),('Actuada');
+
+GO
+insert into tipo (nombre) values ('Serie'),('Película');
+
+GO
 commit transaction;
 GO

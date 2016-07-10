@@ -22,7 +22,7 @@ namespace Servicios.servicios
         public static Titulo FindById(Int32 id)
         {
             Titulo c = null;
-            String comando = String.Format("select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion from titulo where id_titulo={0}", id);
+            String comando = String.Format("select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion, cantidad from titulo where id_titulo={0}", id);
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
@@ -34,10 +34,11 @@ namespace Servicios.servicios
                 String comentarios = (String)lista[0][4];
                 Int32 evaluacion = (Int32)lista[0][5];
                 String ubicacion = (String)lista[0][6];
+                Int32 cantidad = (Int32)lista[0][7];
                 c = new Titulo(
                         id, nombre, idClase, idTipo,
                         fechaLanzamiento, comentarios,
-                        evaluacion, ubicacion);
+                        evaluacion, ubicacion, cantidad);
             }
             return c;
         }
@@ -45,7 +46,7 @@ namespace Servicios.servicios
         public static List<Titulo> FindAll(Int32 id)
         {
             List<Titulo> l = new List<Titulo>();
-            String comando = "select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion from titulo";
+            String comando = "select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion, cantidad from titulo";
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
@@ -59,10 +60,11 @@ namespace Servicios.servicios
                     String comentarios = (String)o[5];
                     Int32 evaluacion = (Int32)o[6];
                     String ubicacion = (String)o[7];
+                    Int32 cantidad = (Int32)o[8];
                     Titulo t = new Titulo(
                             id, nombre, idClase, idTipo,
                             fechaLanzamiento, comentarios,
-                            evaluacion, ubicacion);
+                            evaluacion, ubicacion, cantidad);
                     l.Add(t);
                 }
             }

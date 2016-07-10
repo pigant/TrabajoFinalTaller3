@@ -21,7 +21,7 @@ namespace Servicios.servicios
         public static Idioma FindById(Int32 id)
         {
             Idioma c = null;
-            String comando = String.Format("select nombre from idiomas where id_idioma={0}", id);
+            String comando = String.Format("select nombre from idioma where id_idioma={0}", id);
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
@@ -34,7 +34,7 @@ namespace Servicios.servicios
         public static List<Idioma> FindAll()
         {
             List<Idioma> l = new List<Idioma>();
-            String comando = "select id_idioma, nombre from idiomas";
+            String comando = "select id_idioma, nombre from idioma";
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
