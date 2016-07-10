@@ -152,5 +152,4 @@ ALTER TABLE [titulo_idioma_sub] ADD CONSTRAINT [fk_idiomas_sub] FOREIGN KEY ([id
 GO
 
 commit transaction;
-
 GO

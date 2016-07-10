@@ -54,7 +54,7 @@ namespace Servicios.servicios
         public void EjecutarScript(String url)
         {
             Action<String> funcion = _EjecutarScript;
-            funcion(url);
+            Ejecutar(funcion, url);
         }
 
         private void _EjecutarScript(String url)
