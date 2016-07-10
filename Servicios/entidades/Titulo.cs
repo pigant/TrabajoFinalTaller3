@@ -42,6 +42,18 @@ namespace Servicios.entidades
             Ubicacion = ubicacion;
         }
 
+        public Titulo(Int32 id, String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion)
+        {
+            IdTitulo = idTitulo;
+            NombreTitulo = titulo;
+            IdClase = idClase;
+            IdTipo = idTipo;
+            FechaLanzamiento = fechaLanzamiento;
+            Comentarios = comentarios;
+            Evaluacion = evaluacion;
+            Ubicacion = ubicacion;
+        }
+
         #endregion
 
         /**********************************************************/

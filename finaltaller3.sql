@@ -57,7 +57,7 @@ CREATE TABLE [clase] (
 
 [id_clase] int identity(1,1) NOT NULL,
 
-[tipo] varchar(15) NULL,
+[nombre] varchar(15) NULL,
 
 PRIMARY KEY ([id_clase]) 
 
@@ -148,6 +148,11 @@ ALTER TABLE [titulo_categoria] ADD CONSTRAINT [fk_categoria_ti_categ] FOREIGN KE
 GO
 
 ALTER TABLE [titulo_idioma_sub] ADD CONSTRAINT [fk_idiomas_sub] FOREIGN KEY ([id_idiomas]) REFERENCES [idiomas] ([id_idioma])
+
+GO
+
+
+insert into idiomas (nombre) values ('Inglés'),('Español'),('Japonés'),('Chino'),('Alemán');
 
 GO
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Servicios.servicios;
+using Servicios.entidades;
 
 namespace TrabajoFinalTaller3
 {
@@ -30,6 +31,26 @@ namespace TrabajoFinalTaller3
             fd.ShowDialog();
             url = fd.FileName;
             DBService.ejecutarScript(url);
+        }
+
+        private void verIdiomasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Idioma> idomas = IdiomaService.FindAll();
+        }
+
+        private void verClasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Clase> clases = ClaseService.FindAll();
+        }
+
+        private void verTiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Tipo> tipos = TipoService.FindAll();
+        }
+
+        private void verCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<Categoria> categorias = CategoriaService.FindAll();
         }
     }
 }
