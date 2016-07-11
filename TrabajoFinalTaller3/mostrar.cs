@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace TrabajoFinalTaller3
 {
-    public partial class mostrar : Form
+    public partial class Mostrar : Form
     {
-        public mostrar()
+        public Mostrar()
         {
             InitializeComponent();
         }

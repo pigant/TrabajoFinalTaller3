@@ -18,11 +18,6 @@ namespace TrabajoFinalTaller3
             InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void ExecuteSql_Click(object sender, EventArgs e)
         {
             String url;
@@ -31,11 +26,40 @@ namespace TrabajoFinalTaller3
             url = fd.FileName;
             DBService.ejecutarScript(url);
         }
+        //private void categoriaEIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Mantenedor m = new Mantenedor();
+        //    m.Show();
+        //}
 
-        private void categoriaEIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Mantenedor m = new Mantenedor();
-            m.Show();
+            Application.Exit();
+        }
+        private void categoriaEIdiomaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Ingresar ingresar = new Ingresar();
+            ingresar.ShowDialog(this); 
+        }
+        private void listaDeTitulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mostrar mostrar = new Mostrar();
+            mostrar.ShowDialog(this); 
+        }
+        private void editarTituloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Editar editar = new Editar();
+            editar.ShowDialog(this); 
+        }
+        private void eliminarTituloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Eliminar eliminar = new Eliminar();
+            eliminar.ShowDialog(this); 
+        }
+        private void agregarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mantenedor mantenedor = new Mantenedor();
+            mantenedor.ShowDialog(this); 
         }
     }
 }

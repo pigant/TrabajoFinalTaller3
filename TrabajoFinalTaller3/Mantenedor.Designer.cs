@@ -30,16 +30,18 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Idioma_btn = new System.Windows.Forms.Button();
-            this.Idioma_txt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Categoria_btn = new System.Windows.Forms.Button();
-            this.Categoria_txt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.chkListAudio = new System.Windows.Forms.CheckedListBox();
             this.chkListCategorias = new System.Windows.Forms.CheckedListBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.btnDelIdioma = new System.Windows.Forms.Button();
+            this.btnDelCategoria = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,8 +49,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDelIdioma);
+            this.groupBox1.Controls.Add(this.checkedListBox1);
             this.groupBox1.Controls.Add(this.Idioma_btn);
-            this.groupBox1.Controls.Add(this.Idioma_txt);
             this.groupBox1.Location = new System.Drawing.Point(12, 133);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(283, 167);
@@ -66,17 +69,11 @@
             this.Idioma_btn.UseVisualStyleBackColor = true;
             this.Idioma_btn.Click += new System.EventHandler(this.Idioma_btn_Click);
             // 
-            // Idioma_txt
-            // 
-            this.Idioma_txt.Location = new System.Drawing.Point(27, 34);
-            this.Idioma_txt.Name = "Idioma_txt";
-            this.Idioma_txt.Size = new System.Drawing.Size(162, 20);
-            this.Idioma_txt.TabIndex = 0;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDelCategoria);
+            this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.Categoria_btn);
-            this.groupBox2.Controls.Add(this.Categoria_txt);
             this.groupBox2.Location = new System.Drawing.Point(301, 133);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(279, 167);
@@ -93,13 +90,6 @@
             this.Categoria_btn.Text = "Agregar";
             this.Categoria_btn.UseVisualStyleBackColor = true;
             this.Categoria_btn.Click += new System.EventHandler(this.Categoria_btn_Click);
-            // 
-            // Categoria_txt
-            // 
-            this.Categoria_txt.Location = new System.Drawing.Point(22, 34);
-            this.Categoria_txt.Name = "Categoria_txt";
-            this.Categoria_txt.Size = new System.Drawing.Size(160, 20);
-            this.Categoria_txt.TabIndex = 0;
             // 
             // button3
             // 
@@ -151,11 +141,47 @@
             this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(568, 118);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(24, 32);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(165, 124);
+            this.checkedListBox1.TabIndex = 2;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(18, 32);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(164, 124);
+            this.checkedListBox2.TabIndex = 2;
+            // 
+            // btnDelIdioma
+            // 
+            this.btnDelIdioma.Location = new System.Drawing.Point(195, 105);
+            this.btnDelIdioma.Name = "btnDelIdioma";
+            this.btnDelIdioma.Size = new System.Drawing.Size(75, 23);
+            this.btnDelIdioma.TabIndex = 3;
+            this.btnDelIdioma.Text = "Eliminar";
+            this.btnDelIdioma.UseVisualStyleBackColor = true;
+            this.btnDelIdioma.Click += new System.EventHandler(this.btnDelIdioma_Click);
+            // 
+            // btnDelCategoria
+            // 
+            this.btnDelCategoria.Location = new System.Drawing.Point(188, 105);
+            this.btnDelCategoria.Name = "btnDelCategoria";
+            this.btnDelCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnDelCategoria.TabIndex = 3;
+            this.btnDelCategoria.Text = "Eliminar";
+            this.btnDelCategoria.UseVisualStyleBackColor = true;
+            this.btnDelCategoria.Click += new System.EventHandler(this.btnDelCategoria_Click);
             // 
             // Mantenedor
             // 
@@ -169,9 +195,7 @@
             this.Name = "Mantenedor";
             this.Text = "Mantenedor";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -180,9 +204,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Idioma_txt;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox Categoria_txt;
         private System.Windows.Forms.Button Idioma_btn;
         private System.Windows.Forms.Button Categoria_btn;
         private System.Windows.Forms.Button button3;
@@ -191,5 +213,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckedListBox chkListCategorias;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.Button btnDelIdioma;
+        private System.Windows.Forms.Button btnDelCategoria;
     }
 }

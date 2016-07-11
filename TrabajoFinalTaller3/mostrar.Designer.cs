@@ -1,6 +1,6 @@
 ﻿namespace TrabajoFinalTaller3
 {
-    partial class mostrar
+    partial class Mostrar
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -102,15 +103,25 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // mostrar
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(426, 532);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(93, 23);
+            this.btnVolver.TabIndex = 5;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
+            // Mostrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 521);
+            this.ClientSize = new System.Drawing.Size(592, 567);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "mostrar";
+            this.Name = "Mostrar";
             this.Text = "mostrar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -126,5 +137,6 @@
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

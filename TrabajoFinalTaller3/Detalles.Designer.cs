@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.grpDetalles = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCategorias = new System.Windows.Forms.Label();
+            this.listSubtitulos = new System.Windows.Forms.ListBox();
+            this.listIdiomas = new System.Windows.Forms.ListBox();
+            this.listCategorias = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -47,12 +53,6 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listCategorias = new System.Windows.Forms.ListBox();
-            this.listIdiomas = new System.Windows.Forms.ListBox();
-            this.listSubtitulos = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblCategorias = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grpDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +92,57 @@
             this.grpDetalles.TabStop = false;
             this.grpDetalles.Text = "Detalles";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(289, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Subtitulos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(147, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Audio";
+            // 
+            // lblCategorias
+            // 
+            this.lblCategorias.AutoSize = true;
+            this.lblCategorias.Location = new System.Drawing.Point(8, 323);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(60, 13);
+            this.lblCategorias.TabIndex = 53;
+            this.lblCategorias.Text = "Comentario";
+            // 
+            // listSubtitulos
+            // 
+            this.listSubtitulos.FormattingEnabled = true;
+            this.listSubtitulos.Location = new System.Drawing.Point(289, 339);
+            this.listSubtitulos.Name = "listSubtitulos";
+            this.listSubtitulos.Size = new System.Drawing.Size(133, 108);
+            this.listSubtitulos.TabIndex = 50;
+            // 
+            // listIdiomas
+            // 
+            this.listIdiomas.FormattingEnabled = true;
+            this.listIdiomas.Location = new System.Drawing.Point(150, 339);
+            this.listIdiomas.Name = "listIdiomas";
+            this.listIdiomas.Size = new System.Drawing.Size(133, 108);
+            this.listIdiomas.TabIndex = 50;
+            // 
+            // listCategorias
+            // 
+            this.listCategorias.FormattingEnabled = true;
+            this.listCategorias.Location = new System.Drawing.Point(11, 339);
+            this.listCategorias.Name = "listCategorias";
+            this.listCategorias.Size = new System.Drawing.Size(133, 108);
+            this.listCategorias.TabIndex = 50;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(467, 411);
@@ -100,6 +151,7 @@
             this.btnCancelar.TabIndex = 49;
             this.btnCancelar.Text = "Cerrar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -243,57 +295,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // listCategorias
-            // 
-            this.listCategorias.FormattingEnabled = true;
-            this.listCategorias.Location = new System.Drawing.Point(11, 339);
-            this.listCategorias.Name = "listCategorias";
-            this.listCategorias.Size = new System.Drawing.Size(133, 108);
-            this.listCategorias.TabIndex = 50;
-            // 
-            // listIdiomas
-            // 
-            this.listIdiomas.FormattingEnabled = true;
-            this.listIdiomas.Location = new System.Drawing.Point(150, 339);
-            this.listIdiomas.Name = "listIdiomas";
-            this.listIdiomas.Size = new System.Drawing.Size(133, 108);
-            this.listIdiomas.TabIndex = 50;
-            // 
-            // listSubtitulos
-            // 
-            this.listSubtitulos.FormattingEnabled = true;
-            this.listSubtitulos.Location = new System.Drawing.Point(289, 339);
-            this.listSubtitulos.Name = "listSubtitulos";
-            this.listSubtitulos.Size = new System.Drawing.Size(133, 108);
-            this.listSubtitulos.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(289, 323);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Subtitulos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 323);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Audio";
-            // 
-            // lblCategorias
-            // 
-            this.lblCategorias.AutoSize = true;
-            this.lblCategorias.Location = new System.Drawing.Point(8, 323);
-            this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(60, 13);
-            this.lblCategorias.TabIndex = 53;
-            this.lblCategorias.Text = "Comentario";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
@@ -310,6 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 599);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDetalles);
             this.Name = "Detalles";
