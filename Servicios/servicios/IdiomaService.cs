@@ -63,6 +63,13 @@ namespace Servicios.servicios
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);
         }
+        
+        public static void update(Idioma idioma)
+        {
+            String consulta = String.Format("update idioma set nombre='{1}' where id_idioma={0}", idioma.IdIdioma, idioma.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
 
         #endregion
 
