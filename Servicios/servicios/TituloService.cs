@@ -27,14 +27,15 @@ namespace Servicios.servicios
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
             {
-                String nombre = (String)lista[0][0];
-                Int32 idClase = (Int32)lista[0][1];
-                Int32 idTipo = (Int32)lista[0][2];
-                DateTime fechaLanzamiento = (DateTime)lista[0][3];
-                String comentarios = (String)lista[0][4];
-                Int32 evaluacion = (Int32)lista[0][5];
-                String ubicacion = (String)lista[0][6];
-                Int32 cantidad = (Int32)lista[0][7];
+                Object[] o = lista[0];
+                String nombre = (String) o[0];
+                Int32 idClase = (Int32) o[1];
+                Int32 idTipo = (Int32) o[2];
+                DateTime fechaLanzamiento = (DateTime) o[3];
+                String comentarios = (String) o[4];
+                Int32 evaluacion = (Int32) o[5];
+                String ubicacion = (String) o[6];
+                Int32 cantidad = (Int32) o[7];
                 c = new Titulo(
                         id, nombre, idClase, idTipo,
                         fechaLanzamiento, comentarios,
@@ -69,6 +70,36 @@ namespace Servicios.servicios
                 }
             }
             return l;
+        }
+
+        public static void create(Titulo titulo)
+        {
+            String consulta = String.Format(
+                "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
+                + "values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", 
+                titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+        
+        public static void delete(Int32 id)
+        {
+            String consulta = String.Format("delete from titulo where id_titulo={0}", id);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+        
+        public static void update(Titulo titulo)
+        {
+            String consulta = String.Format(
+                "update titulo set titulo='{1}',fecha='{2}',comentario='{3}, "
+                +"evaluacion={4},ubicacion='{5}',cantidad={6},id_tipo={7},"
+                +"id_clase={8} where id_tipo={0}", 
+                titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.Evaluacion, titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
         }
 
         #endregion

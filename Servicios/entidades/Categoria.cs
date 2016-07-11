@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Servicios.servicios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,7 @@ namespace Servicios.entidades
             IdCategoria = idCategoria;
             Nombre = nombre;
         }
+
         #endregion
         /**********************************************************/
         /* Definicion de metodos */

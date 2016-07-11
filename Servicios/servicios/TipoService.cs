@@ -49,6 +49,28 @@ namespace Servicios.servicios
             }
             return l;
         }
+
+        public static void create(Tipo tipo)
+        {
+            String consulta = String.Format("insert into tipo (nombre) values ('{0}')", tipo.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+        
+        public static void delete(Int32 id)
+        {
+            String consulta = String.Format("delete from tipo where id_tipo={0}", id);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+        
+        public static void update(Tipo tipo)
+        {
+            String consulta = String.Format("update tipo set nombre='{1}' where id_tipo={0}", tipo.IdTipo, tipo.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
         #endregion
 
         /**********************************************************/

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Servicios.entidades;
+using Servicios.servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,23 @@ namespace TrabajoFinalTaller3
         public Mantenedor()
         {
             InitializeComponent();
+        }
+
+        private void Idioma_btn_Click(object sender, EventArgs e)
+        {
+            Idioma i = new Idioma(Idioma_txt.Text);
+            IdiomaService.create(i);
+        }
+
+        private void Categoria_btn_Click(object sender, EventArgs e)
+        {
+            Categoria c = new Categoria(Categoria_txt.Text);
+            CategoriaService.create(c);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
