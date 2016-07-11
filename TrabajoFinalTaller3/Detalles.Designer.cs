@@ -53,8 +53,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCategorias = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grpDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDetalles
@@ -83,7 +85,7 @@
             this.grpDetalles.Controls.Add(this.txtTitulo);
             this.grpDetalles.Controls.Add(this.Titulo);
             this.grpDetalles.Controls.Add(this.pictureBox1);
-            this.grpDetalles.Location = new System.Drawing.Point(12, 12);
+            this.grpDetalles.Location = new System.Drawing.Point(12, 134);
             this.grpDetalles.Name = "grpDetalles";
             this.grpDetalles.Size = new System.Drawing.Size(568, 453);
             this.grpDetalles.TabIndex = 0;
@@ -232,6 +234,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.th;
+            this.pictureBox1.Image = global::TrabajoFinalTaller3.Properties.Resources.th;
+            this.pictureBox1.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.th;
             this.pictureBox1.Location = new System.Drawing.Point(19, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 247);
@@ -289,17 +294,30 @@
             this.lblCategorias.TabIndex = 53;
             this.lblCategorias.Text = "Comentario";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(568, 116);
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
+            // 
             // Detalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 478);
+            this.ClientSize = new System.Drawing.Size(592, 599);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDetalles);
             this.Name = "Detalles";
             this.Text = "detalles";
             this.grpDetalles.ResumeLayout(false);
             this.grpDetalles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +349,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCategorias;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

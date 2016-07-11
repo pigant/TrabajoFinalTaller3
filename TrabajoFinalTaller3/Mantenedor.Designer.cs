@@ -35,29 +35,32 @@
             this.Categoria_btn = new System.Windows.Forms.Button();
             this.Categoria_txt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.chkListAudio = new System.Windows.Forms.CheckedListBox();
+            this.chkListCategorias = new System.Windows.Forms.CheckedListBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Idioma_btn);
             this.groupBox1.Controls.Add(this.Idioma_txt);
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(377, 206);
+            this.groupBox1.Size = new System.Drawing.Size(283, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Idiomas";
             // 
             // Idioma_btn
             // 
-            this.Idioma_btn.Location = new System.Drawing.Point(260, 39);
-            this.Idioma_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Idioma_btn.Location = new System.Drawing.Point(195, 32);
             this.Idioma_btn.Name = "Idioma_btn";
-            this.Idioma_btn.Size = new System.Drawing.Size(100, 28);
+            this.Idioma_btn.Size = new System.Drawing.Size(75, 23);
             this.Idioma_btn.TabIndex = 1;
             this.Idioma_btn.Text = "Agregar";
             this.Idioma_btn.UseVisualStyleBackColor = true;
@@ -65,31 +68,27 @@
             // 
             // Idioma_txt
             // 
-            this.Idioma_txt.Location = new System.Drawing.Point(36, 42);
-            this.Idioma_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Idioma_txt.Location = new System.Drawing.Point(27, 34);
             this.Idioma_txt.Name = "Idioma_txt";
-            this.Idioma_txt.Size = new System.Drawing.Size(215, 22);
+            this.Idioma_txt.Size = new System.Drawing.Size(162, 20);
             this.Idioma_txt.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Categoria_btn);
             this.groupBox2.Controls.Add(this.Categoria_txt);
-            this.groupBox2.Location = new System.Drawing.Point(401, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(301, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(372, 206);
+            this.groupBox2.Size = new System.Drawing.Size(279, 167);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Categorias";
             // 
             // Categoria_btn
             // 
-            this.Categoria_btn.Location = new System.Drawing.Point(251, 39);
-            this.Categoria_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Categoria_btn.Location = new System.Drawing.Point(188, 32);
             this.Categoria_btn.Name = "Categoria_btn";
-            this.Categoria_btn.Size = new System.Drawing.Size(100, 28);
+            this.Categoria_btn.Size = new System.Drawing.Size(75, 23);
             this.Categoria_btn.TabIndex = 1;
             this.Categoria_btn.Text = "Agregar";
             this.Categoria_btn.UseVisualStyleBackColor = true;
@@ -97,38 +96,83 @@
             // 
             // Categoria_txt
             // 
-            this.Categoria_txt.Location = new System.Drawing.Point(29, 42);
-            this.Categoria_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Categoria_txt.Location = new System.Drawing.Point(22, 34);
             this.Categoria_txt.Name = "Categoria_txt";
-            this.Categoria_txt.Size = new System.Drawing.Size(212, 22);
+            this.Categoria_txt.Size = new System.Drawing.Size(160, 20);
             this.Categoria_txt.TabIndex = 0;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(636, 241);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(477, 317);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 1;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // chkListAudio
+            // 
+            this.chkListAudio.FormattingEnabled = true;
+            this.chkListAudio.Location = new System.Drawing.Point(33, 32);
+            this.chkListAudio.Name = "chkListAudio";
+            this.chkListAudio.Size = new System.Drawing.Size(138, 109);
+            this.chkListAudio.TabIndex = 3;
+            // 
+            // chkListCategorias
+            // 
+            this.chkListCategorias.FormattingEnabled = true;
+            this.chkListCategorias.Location = new System.Drawing.Point(23, 32);
+            this.chkListCategorias.Name = "chkListCategorias";
+            this.chkListCategorias.Size = new System.Drawing.Size(143, 109);
+            this.chkListCategorias.TabIndex = 3;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(195, 82);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 1;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(188, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(568, 118);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // Mantenedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 295);
+            this.ClientSize = new System.Drawing.Size(588, 353);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mantenedor";
             this.Text = "Mantenedor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +186,10 @@
         private System.Windows.Forms.Button Idioma_btn;
         private System.Windows.Forms.Button Categoria_btn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.CheckedListBox chkListAudio;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox chkListCategorias;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

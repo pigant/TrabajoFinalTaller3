@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.grpDtos = new System.Windows.Forms.GroupBox();
+            this.chkListSubtitulos = new System.Windows.Forms.CheckedListBox();
+            this.chkListAudio = new System.Windows.Forms.CheckedListBox();
+            this.chkListCategorias = new System.Windows.Forms.CheckedListBox();
             this.cmbClase = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,19 +44,18 @@
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.cmbFecha = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblCategorias = new System.Windows.Forms.Label();
             this.lblComentario = new System.Windows.Forms.Label();
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
-            this.chkListCategorias = new System.Windows.Forms.CheckedListBox();
-            this.lblCategorias = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chkListAudio = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chkListSubtitulos = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grpDtos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDtos
@@ -82,13 +84,37 @@
             this.grpDtos.Controls.Add(this.txtComentario);
             this.grpDtos.Controls.Add(this.txtTitulo);
             this.grpDtos.Controls.Add(this.Titulo);
-            this.grpDtos.Location = new System.Drawing.Point(12, 12);
+            this.grpDtos.Location = new System.Drawing.Point(30, 134);
             this.grpDtos.Name = "grpDtos";
             this.grpDtos.Size = new System.Drawing.Size(524, 390);
             this.grpDtos.TabIndex = 0;
             this.grpDtos.TabStop = false;
             this.grpDtos.Text = "Ingrese los datos";
             this.grpDtos.Enter += new System.EventHandler(this.grpDtos_Enter);
+            // 
+            // chkListSubtitulos
+            // 
+            this.chkListSubtitulos.FormattingEnabled = true;
+            this.chkListSubtitulos.Location = new System.Drawing.Point(361, 219);
+            this.chkListSubtitulos.Name = "chkListSubtitulos";
+            this.chkListSubtitulos.Size = new System.Drawing.Size(143, 109);
+            this.chkListSubtitulos.TabIndex = 0;
+            // 
+            // chkListAudio
+            // 
+            this.chkListAudio.FormattingEnabled = true;
+            this.chkListAudio.Location = new System.Drawing.Point(194, 219);
+            this.chkListAudio.Name = "chkListAudio";
+            this.chkListAudio.Size = new System.Drawing.Size(138, 109);
+            this.chkListAudio.TabIndex = 0;
+            // 
+            // chkListCategorias
+            // 
+            this.chkListCategorias.FormattingEnabled = true;
+            this.chkListCategorias.Location = new System.Drawing.Point(25, 219);
+            this.chkListCategorias.Name = "chkListCategorias";
+            this.chkListCategorias.Size = new System.Drawing.Size(137, 109);
+            this.chkListCategorias.TabIndex = 0;
             // 
             // cmbClase
             // 
@@ -190,12 +216,30 @@
             this.btnOK.Text = "Agregar";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(358, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Subtitulos";
+            // 
             // cmbFecha
             // 
             this.cmbFecha.Location = new System.Drawing.Point(304, 42);
             this.cmbFecha.Name = "cmbFecha";
             this.cmbFecha.Size = new System.Drawing.Size(200, 20);
             this.cmbFecha.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(191, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Audio";
             // 
             // lblFecha
             // 
@@ -205,6 +249,15 @@
             this.lblFecha.Size = new System.Drawing.Size(100, 13);
             this.lblFecha.TabIndex = 28;
             this.lblFecha.Text = "Fecha Lanzamiento";
+            // 
+            // lblCategorias
+            // 
+            this.lblCategorias.AutoSize = true;
+            this.lblCategorias.Location = new System.Drawing.Point(22, 203);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(57, 13);
+            this.lblCategorias.TabIndex = 24;
+            this.lblCategorias.Text = "Categorias";
             // 
             // lblComentario
             // 
@@ -239,67 +292,29 @@
             this.Titulo.TabIndex = 20;
             this.Titulo.Text = "Titulo";
             // 
-            // chkListCategorias
+            // pictureBox2
             // 
-            this.chkListCategorias.FormattingEnabled = true;
-            this.chkListCategorias.Location = new System.Drawing.Point(25, 219);
-            this.chkListCategorias.Name = "chkListCategorias";
-            this.chkListCategorias.Size = new System.Drawing.Size(137, 109);
-            this.chkListCategorias.TabIndex = 0;
-            // 
-            // lblCategorias
-            // 
-            this.lblCategorias.AutoSize = true;
-            this.lblCategorias.Location = new System.Drawing.Point(22, 203);
-            this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(57, 13);
-            this.lblCategorias.TabIndex = 24;
-            this.lblCategorias.Text = "Categorias";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Audio";
-            // 
-            // chkListAudio
-            // 
-            this.chkListAudio.FormattingEnabled = true;
-            this.chkListAudio.Location = new System.Drawing.Point(194, 219);
-            this.chkListAudio.Name = "chkListAudio";
-            this.chkListAudio.Size = new System.Drawing.Size(138, 109);
-            this.chkListAudio.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(358, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Subtitulos";
-            // 
-            // chkListSubtitulos
-            // 
-            this.chkListSubtitulos.FormattingEnabled = true;
-            this.chkListSubtitulos.Location = new System.Drawing.Point(361, 219);
-            this.chkListSubtitulos.Name = "chkListSubtitulos";
-            this.chkListSubtitulos.Size = new System.Drawing.Size(143, 109);
-            this.chkListSubtitulos.TabIndex = 0;
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(568, 116);
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
             // 
             // Ingresar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 416);
+            this.ClientSize = new System.Drawing.Size(592, 541);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
             this.Name = "Ingresar";
             this.Text = "Ingresar";
             this.grpDtos.ResumeLayout(false);
             this.grpDtos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +346,6 @@
         private System.Windows.Forms.CheckedListBox chkListAudio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

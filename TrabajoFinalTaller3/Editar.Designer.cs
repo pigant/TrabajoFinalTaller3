@@ -53,7 +53,9 @@
             this.txtComentario = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grpDtos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDtos
@@ -82,7 +84,7 @@
             this.grpDtos.Controls.Add(this.txtComentario);
             this.grpDtos.Controls.Add(this.txtTitulo);
             this.grpDtos.Controls.Add(this.Titulo);
-            this.grpDtos.Location = new System.Drawing.Point(14, 13);
+            this.grpDtos.Location = new System.Drawing.Point(29, 134);
             this.grpDtos.Name = "grpDtos";
             this.grpDtos.Size = new System.Drawing.Size(524, 390);
             this.grpDtos.TabIndex = 1;
@@ -289,16 +291,29 @@
             this.Titulo.TabIndex = 20;
             this.Titulo.Text = "Titulo";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(568, 116);
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
             // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 416);
+            this.ClientSize = new System.Drawing.Size(591, 536);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
             this.Name = "Editar";
             this.Text = "Editar";
             this.grpDtos.ResumeLayout(false);
             this.grpDtos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,6 +345,7 @@
         private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label Titulo;
+        private System.Windows.Forms.PictureBox pictureBox2;
 
     }
 }
