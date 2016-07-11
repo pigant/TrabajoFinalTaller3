@@ -58,6 +58,13 @@ namespace Servicios.servicios
             db.OperacionesNonQuery(consulta);
         }
         
+        public static void delete(Int32 id)
+        {
+            String consulta = String.Format("delete from categoria where id_categoria={0}", id);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
         #endregion
 
         /**********************************************************/
