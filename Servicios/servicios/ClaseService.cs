@@ -49,6 +49,14 @@ namespace Servicios.servicios
             }
             return l;
         }
+
+        public static void create(Clase clase)
+        {
+            String consulta = String.Format("insert into clase (nombre) values ('{0}')", clase.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
         #endregion
 
         /**********************************************************/

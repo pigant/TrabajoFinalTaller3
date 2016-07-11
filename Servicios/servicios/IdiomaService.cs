@@ -49,6 +49,14 @@ namespace Servicios.servicios
             }
             return l;
         }
+
+        public static void create(Idioma idioma)
+        {
+            String consulta = String.Format("insert into idioma (nombre) values ('{0}')", idioma.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
         #endregion
 
         /**********************************************************/

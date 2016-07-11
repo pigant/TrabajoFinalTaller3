@@ -71,6 +71,17 @@ namespace Servicios.servicios
             return l;
         }
 
+        public static void create(Titulo titulo)
+        {
+            String consulta = String.Format(
+                "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
+                + "values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", 
+                titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
         #endregion
 
         /**********************************************************/

@@ -50,6 +50,14 @@ namespace Servicios.servicios
             }
             return l;
         }
+
+        public static void create(Categoria categoria)
+        {
+            String consulta = String.Format("insert into categoria (nombre) values ('{0}')", categoria.Nombre);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+        
         #endregion
 
         /**********************************************************/
