@@ -81,6 +81,13 @@ namespace Servicios.servicios
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);
         }
+        
+        public static void delete(Int32 id)
+        {
+            String consulta = String.Format("delete from titulo where id_titulo={0}", id);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
 
         #endregion
 
