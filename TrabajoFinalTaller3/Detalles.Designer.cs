@@ -314,6 +314,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDetalles);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 626);
+            this.MinimumSize = new System.Drawing.Size(600, 626);
             this.Name = "Detalles";
             this.Text = "detalles";
             this.grpDetalles.ResumeLayout(false);

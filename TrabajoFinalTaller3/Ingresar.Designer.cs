@@ -312,6 +312,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 568);
+            this.MinimumSize = new System.Drawing.Size(600, 568);
             this.Name = "Ingresar";
             this.Text = "Ingresar";
             this.grpDtos.ResumeLayout(false);

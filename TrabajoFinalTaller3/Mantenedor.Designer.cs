@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDelIdioma = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Idioma_btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelCategoria = new System.Windows.Forms.Button();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.Categoria_btn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.chkListAudio = new System.Windows.Forms.CheckedListBox();
@@ -38,10 +42,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.btnDelIdioma = new System.Windows.Forms.Button();
-            this.btnDelCategoria = new System.Windows.Forms.Button();
+            this.idioma_txt = new System.Windows.Forms.TextBox();
+            this.categoria_txt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -49,6 +51,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.idioma_txt);
             this.groupBox1.Controls.Add(this.btnDelIdioma);
             this.groupBox1.Controls.Add(this.checkedListBox1);
             this.groupBox1.Controls.Add(this.Idioma_btn);
@@ -58,6 +61,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Idiomas";
+            // 
+            // btnDelIdioma
+            // 
+            this.btnDelIdioma.Location = new System.Drawing.Point(195, 105);
+            this.btnDelIdioma.Name = "btnDelIdioma";
+            this.btnDelIdioma.Size = new System.Drawing.Size(75, 23);
+            this.btnDelIdioma.TabIndex = 3;
+            this.btnDelIdioma.Text = "Eliminar";
+            this.btnDelIdioma.UseVisualStyleBackColor = true;
+            this.btnDelIdioma.Click += new System.EventHandler(this.btnDelIdioma_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(24, 62);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(165, 94);
+            this.checkedListBox1.TabIndex = 2;
             // 
             // Idioma_btn
             // 
@@ -71,6 +92,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.categoria_txt);
             this.groupBox2.Controls.Add(this.btnDelCategoria);
             this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.Categoria_btn);
@@ -80,6 +102,24 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Categorias";
+            // 
+            // btnDelCategoria
+            // 
+            this.btnDelCategoria.Location = new System.Drawing.Point(188, 105);
+            this.btnDelCategoria.Name = "btnDelCategoria";
+            this.btnDelCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnDelCategoria.TabIndex = 3;
+            this.btnDelCategoria.Text = "Eliminar";
+            this.btnDelCategoria.UseVisualStyleBackColor = true;
+            this.btnDelCategoria.Click += new System.EventHandler(this.btnDelCategoria_Click);
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(18, 62);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(164, 94);
+            this.checkedListBox2.TabIndex = 2;
             // 
             // Categoria_btn
             // 
@@ -147,41 +187,19 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // checkedListBox1
+            // idioma_txt
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(24, 32);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(165, 124);
-            this.checkedListBox1.TabIndex = 2;
+            this.idioma_txt.Location = new System.Drawing.Point(24, 36);
+            this.idioma_txt.Name = "idioma_txt";
+            this.idioma_txt.Size = new System.Drawing.Size(165, 20);
+            this.idioma_txt.TabIndex = 4;
             // 
-            // checkedListBox2
+            // categoria_txt
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(18, 32);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(164, 124);
-            this.checkedListBox2.TabIndex = 2;
-            // 
-            // btnDelIdioma
-            // 
-            this.btnDelIdioma.Location = new System.Drawing.Point(195, 105);
-            this.btnDelIdioma.Name = "btnDelIdioma";
-            this.btnDelIdioma.Size = new System.Drawing.Size(75, 23);
-            this.btnDelIdioma.TabIndex = 3;
-            this.btnDelIdioma.Text = "Eliminar";
-            this.btnDelIdioma.UseVisualStyleBackColor = true;
-            this.btnDelIdioma.Click += new System.EventHandler(this.btnDelIdioma_Click);
-            // 
-            // btnDelCategoria
-            // 
-            this.btnDelCategoria.Location = new System.Drawing.Point(188, 105);
-            this.btnDelCategoria.Name = "btnDelCategoria";
-            this.btnDelCategoria.Size = new System.Drawing.Size(75, 23);
-            this.btnDelCategoria.TabIndex = 3;
-            this.btnDelCategoria.Text = "Eliminar";
-            this.btnDelCategoria.UseVisualStyleBackColor = true;
-            this.btnDelCategoria.Click += new System.EventHandler(this.btnDelCategoria_Click);
+            this.categoria_txt.Location = new System.Drawing.Point(17, 34);
+            this.categoria_txt.Name = "categoria_txt";
+            this.categoria_txt.Size = new System.Drawing.Size(165, 20);
+            this.categoria_txt.TabIndex = 4;
             // 
             // Mantenedor
             // 
@@ -192,10 +210,15 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(596, 380);
+            this.MinimumSize = new System.Drawing.Size(596, 380);
             this.Name = "Mantenedor";
             this.Text = "Mantenedor";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -217,5 +240,7 @@
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Button btnDelIdioma;
         private System.Windows.Forms.Button btnDelCategoria;
+        private System.Windows.Forms.TextBox idioma_txt;
+        private System.Windows.Forms.TextBox categoria_txt;
     }
 }

@@ -94,6 +94,9 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(597, 306);
+            this.MinimumSize = new System.Drawing.Size(597, 306);
             this.Name = "Eliminar";
             this.Text = "Eliminar";
             this.Load += new System.EventHandler(this.Eliminar_Load);

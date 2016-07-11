@@ -121,6 +121,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 594);
+            this.MinimumSize = new System.Drawing.Size(600, 594);
             this.Name = "Mostrar";
             this.Text = "mostrar";
             this.groupBox1.ResumeLayout(false);

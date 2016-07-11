@@ -183,6 +183,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 443);
+            this.MinimumSize = new System.Drawing.Size(600, 443);
             this.Name = "Sistema";
             this.Text = "Sistema";
             this.menuStrip1.ResumeLayout(false);

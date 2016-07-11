@@ -20,14 +20,14 @@ namespace TrabajoFinalTaller3
 
         private void Idioma_btn_Click(object sender, EventArgs e)
         {
-           // Idioma i = new Idioma(Idioma_txt.Text);
-           // IdiomaService.create(i);
+            Idioma i = new Idioma(idioma_txt.Text);
+            IdiomaService.create(i);
         }
 
         private void Categoria_btn_Click(object sender, EventArgs e)
         {
-           //  Categoria c = new Categoria(Categoria_txt.Text);
-           // CategoriaService.create(c);
+            Categoria c = new Categoria(categoria_txt.Text);
+            CategoriaService.create(c);
         }
 
         private void button3_Click(object sender, EventArgs e)

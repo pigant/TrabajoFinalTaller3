@@ -311,6 +311,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(599, 563);
+            this.MinimumSize = new System.Drawing.Size(599, 563);
             this.Name = "Editar";
             this.Text = "Editar";
             this.grpDtos.ResumeLayout(false);
