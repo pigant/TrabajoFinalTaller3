@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenedor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAddIdioma = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -131,13 +130,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(568, 116);
-            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // Mantenedor

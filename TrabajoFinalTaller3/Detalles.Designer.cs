@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalles));
             this.grpDetalles = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -235,9 +234,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.th;
+            this.pictureBox1.Image = global::TrabajoFinalTaller3.Properties.Resources.th;
+            this.pictureBox1.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.th;
             this.pictureBox1.Location = new System.Drawing.Point(19, 34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 247);
@@ -297,13 +296,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(568, 116);
-            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
             // Detalles
