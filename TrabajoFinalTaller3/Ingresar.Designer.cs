@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingresar));
             this.grpDtos = new System.Windows.Forms.GroupBox();
             this.cmbClase = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,9 @@
             this.chkListAudio = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chkListSubtitulos = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grpDtos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDtos
@@ -82,7 +85,7 @@
             this.grpDtos.Controls.Add(this.txtComentario);
             this.grpDtos.Controls.Add(this.txtTitulo);
             this.grpDtos.Controls.Add(this.Titulo);
-            this.grpDtos.Location = new System.Drawing.Point(12, 12);
+            this.grpDtos.Location = new System.Drawing.Point(26, 134);
             this.grpDtos.Name = "grpDtos";
             this.grpDtos.Size = new System.Drawing.Size(524, 390);
             this.grpDtos.TabIndex = 0;
@@ -290,16 +293,29 @@
             this.chkListSubtitulos.Size = new System.Drawing.Size(143, 109);
             this.chkListSubtitulos.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(568, 116);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // Ingresar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 416);
+            this.ClientSize = new System.Drawing.Size(592, 541);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
             this.Name = "Ingresar";
             this.Text = "Ingresar";
             this.grpDtos.ResumeLayout(false);
             this.grpDtos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +347,6 @@
         private System.Windows.Forms.CheckedListBox chkListAudio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
