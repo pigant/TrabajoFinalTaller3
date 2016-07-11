@@ -49,21 +49,18 @@
             // 
             this.groupBox1.Controls.Add(this.Idioma_btn);
             this.groupBox1.Controls.Add(this.Idioma_txt);
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(377, 206);
+            this.groupBox1.Size = new System.Drawing.Size(283, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Idiomas";
             // 
             // Idioma_btn
             // 
-            this.Idioma_btn.Location = new System.Drawing.Point(260, 39);
-            this.Idioma_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Idioma_btn.Location = new System.Drawing.Point(195, 32);
             this.Idioma_btn.Name = "Idioma_btn";
-            this.Idioma_btn.Size = new System.Drawing.Size(100, 28);
+            this.Idioma_btn.Size = new System.Drawing.Size(75, 23);
             this.Idioma_btn.TabIndex = 1;
             this.Idioma_btn.Text = "Agregar";
             this.Idioma_btn.UseVisualStyleBackColor = true;
@@ -71,31 +68,27 @@
             // 
             // Idioma_txt
             // 
-            this.Idioma_txt.Location = new System.Drawing.Point(36, 42);
-            this.Idioma_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Idioma_txt.Location = new System.Drawing.Point(27, 34);
             this.Idioma_txt.Name = "Idioma_txt";
-            this.Idioma_txt.Size = new System.Drawing.Size(215, 22);
+            this.Idioma_txt.Size = new System.Drawing.Size(162, 20);
             this.Idioma_txt.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Categoria_btn);
             this.groupBox2.Controls.Add(this.Categoria_txt);
-            this.groupBox2.Location = new System.Drawing.Point(401, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(301, 133);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(372, 206);
+            this.groupBox2.Size = new System.Drawing.Size(279, 167);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Categorias";
             // 
             // Categoria_btn
             // 
-            this.Categoria_btn.Location = new System.Drawing.Point(251, 39);
-            this.Categoria_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Categoria_btn.Location = new System.Drawing.Point(188, 32);
             this.Categoria_btn.Name = "Categoria_btn";
-            this.Categoria_btn.Size = new System.Drawing.Size(100, 28);
+            this.Categoria_btn.Size = new System.Drawing.Size(75, 23);
             this.Categoria_btn.TabIndex = 1;
             this.Categoria_btn.Text = "Agregar";
             this.Categoria_btn.UseVisualStyleBackColor = true;
@@ -103,18 +96,16 @@
             // 
             // Categoria_txt
             // 
-            this.Categoria_txt.Location = new System.Drawing.Point(29, 42);
-            this.Categoria_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Categoria_txt.Location = new System.Drawing.Point(22, 34);
             this.Categoria_txt.Name = "Categoria_txt";
-            this.Categoria_txt.Size = new System.Drawing.Size(212, 22);
+            this.Categoria_txt.Size = new System.Drawing.Size(160, 20);
             this.Categoria_txt.TabIndex = 0;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(636, 241);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(477, 317);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 1;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
@@ -159,26 +150,28 @@
             this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(568, 116);
+            this.pictureBox2.Size = new System.Drawing.Size(568, 118);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // Mantenedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 353);
+            this.ClientSize = new System.Drawing.Size(588, 353);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mantenedor";
             this.Text = "Mantenedor";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
