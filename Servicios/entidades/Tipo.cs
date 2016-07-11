@@ -41,6 +41,11 @@ namespace Servicios.entidades
         /* Definicion de metodos */
         /**********************************************************/
 
+        public override string ToString()
+        {
+            return nombre;
+        }
+
         /**********************************************************/
         /* Definicion de Propiedades */
         /**********************************************************/

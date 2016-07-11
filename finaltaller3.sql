@@ -85,7 +85,7 @@ GO
 
 CREATE TABLE [titulo_idioma_aud] (
 
-[id_titulo] int identity(1,1) NOT NULL,
+[id_titulo] int NOT NULL,
 
 [id_idioma] int NULL
 
@@ -97,7 +97,7 @@ GO
 
 CREATE TABLE [titulo_idioma_sub] (
 
-[id_titulo] int identity(1,1) NOT NULL,
+[id_titulo] int NOT NULL,
 
 [id_idioma] int NULL
 
@@ -109,7 +109,7 @@ GO
 
 CREATE TABLE [titulo_categoria] (
 
-[id_titulo] int identity(1,1) NOT NULL,
+[id_titulo] int NOT NULL,
 
 [id_categoria] int NULL
 
@@ -154,11 +154,11 @@ ALTER TABLE [titulo_idioma_sub] ADD CONSTRAINT [fk_idioma_sub] FOREIGN KEY ([id_
 GO
 
 
-insert into idioma (nombre) values ('Inglés'),('Español'),('Japonés'),('Chino'),('Alemán');
+insert into idioma (nombre) values ('Inglés'),('Español'),('Japonés'),('Chino'),('Alemán'),('Thai'),('Frances'),('Ruso'),('Portugues'),('Coreano');
 
 GO
 
-insert into categoria (nombre) values ('Ficción'),('Aventura'),('Drama');
+insert into categoria (nombre) values ('Ficción'),('Aventura'),('Drama'),('Anime'),('Robots'),('Comedia'),('SuperHeroes'),('Pelea'),('Romance'),('Familiar'),('Adultos'),('Misterio'),('Espionaje'),('Magia'),('Fantasia'),('Guerra');
 
 GO
 

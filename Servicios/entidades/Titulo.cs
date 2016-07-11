@@ -16,7 +16,7 @@ namespace Servicios.entidades
         private String nombreTitulo;
         private int idClase;
         private int idTipo;
-        private DateTime fechaLanzamiento;
+        private String fechaLanzamiento;
         private String comentarios;
         private int evaluacion;
         private String ubicacion;
@@ -32,7 +32,7 @@ namespace Servicios.entidades
 
         }
 
-        public Titulo(String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
+        public Titulo(String titulo, int idClase, int idTipo, String fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
         {
             NombreTitulo = titulo;
             IdClase = idClase;
@@ -44,7 +44,7 @@ namespace Servicios.entidades
             Cantidad = cantidad;
         }
 
-        public Titulo(Int32 id, String titulo, int idClase, int idTipo, DateTime fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
+        public Titulo(Int32 id, String titulo, int idClase, int idTipo, String fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
         {
             IdTitulo = idTitulo;
             NombreTitulo = titulo;
@@ -63,6 +63,12 @@ namespace Servicios.entidades
         /* Definicion de metodos */
         /**********************************************************/
         #region
+
+        public override string ToString()
+        {
+            return nombreTitulo;
+        }
+
         #endregion
 
         /**********************************************************/
@@ -108,7 +114,7 @@ namespace Servicios.entidades
             }
         }
 
-        public DateTime FechaLanzamiento
+        public String FechaLanzamiento
         {
             get
             {

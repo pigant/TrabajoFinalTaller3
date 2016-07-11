@@ -39,7 +39,14 @@ namespace Servicios.entidades
         /**********************************************************/
         /* Definicion de metodos */
         /**********************************************************/
+        #region
 
+        public override string ToString()
+        {
+            return nombre;
+        }
+
+        #endregion
         /**********************************************************/
         /* Definicion de Propiedades */
         /**********************************************************/

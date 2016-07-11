@@ -31,7 +31,7 @@ namespace Servicios.servicios
                 String nombre = (String) o[0];
                 Int32 idClase = (Int32) o[1];
                 Int32 idTipo = (Int32) o[2];
-                DateTime fechaLanzamiento = (DateTime) o[3];
+                String fechaLanzamiento = ((DateTime) o[3]).ToString();
                 String comentarios = (String) o[4];
                 Int32 evaluacion = (Int32) o[5];
                 String ubicacion = (String) o[6];
@@ -57,7 +57,7 @@ namespace Servicios.servicios
                     String nombre = (String)o[1];
                     Int32 idClase = (Int32)o[2];
                     Int32 idTipo = (Int32)o[3];
-                    DateTime fechaLanzamiento = (DateTime)o[4];
+                    String fechaLanzamiento = ((DateTime)o[4]).ToString();
                     String comentarios = (String)o[5];
                     Int32 evaluacion = (Int32)o[6];
                     String ubicacion = (String)o[7];
@@ -76,11 +76,13 @@ namespace Servicios.servicios
         {
             String consulta = String.Format(
                 "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
-                + "values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", 
+                + "values ('{0}','{1}','{2}',{3},'{4}',{5},{6},{7})", 
                 titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.Evaluacion,
                 titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
-            db.OperacionesNonQuery(consulta);
+            Int32 id = db.OperacionesNonQueryReturnId(consulta);
+            titulo.IdTitulo = id;
         }
         
         public static void delete(Int32 id)
@@ -98,6 +100,27 @@ namespace Servicios.servicios
                 +"id_clase={8} where id_tipo={0}", 
                 titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
                 titulo.Evaluacion, titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
+        public static void CreateRelationAudio(Int32 idTitulo, Int32 idIdioma)
+        {
+            String consulta = String.Format("insert into titulo_idioma_aud (id_titulo, id_idioma) values ({0}, {1})", idTitulo, idIdioma);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
+        public static void CreateRelationSubtitulo(Int32 idTitulo, Int32 idIdioma)
+        {
+            String consulta = String.Format("insert into titulo_idioma_sub (id_titulo, id_idioma) values ({0}, {1})", idTitulo, idIdioma);
+            ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
+        public static void CreateRelationCategoria(Int32 idTitulo, Int32 idCategoria)
+        {
+            String consulta = String.Format("insert into titulo_categoria (id_titulo, id_categoria) values ({0}, {1})", idTitulo, idCategoria);
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);
         }

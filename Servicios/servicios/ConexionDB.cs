@@ -83,6 +83,27 @@ namespace Servicios.servicios
             SqlCommand comand = new SqlCommand(comando, con);
             comand.ExecuteNonQuery();
         }
+        public Int32 OperacionesNonQueryReturnId(String comando)
+        {
+            Int32 salida = -1;
+            try
+            {
+                Conectar();
+                SqlCommand cmd = new SqlCommand(comando, con);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("select scope_identity();", con);
+                salida =  Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return salida;
+        }
 
         private void Conectar()
         {

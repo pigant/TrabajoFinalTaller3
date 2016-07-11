@@ -38,7 +38,7 @@ namespace TrabajoFinalTaller3
         }
         private void categoriaEIdiomaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Ingresar ingresar = new Ingresar();
+            IngresarForm ingresar = new IngresarForm();
             ingresar.ShowDialog(this); 
         }
         private void listaDeTitulosToolStripMenuItem_Click(object sender, EventArgs e)
