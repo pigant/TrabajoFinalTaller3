@@ -31,5 +31,11 @@ namespace TrabajoFinalTaller3
             url = fd.FileName;
             DBService.ejecutarScript(url);
         }
+
+        private void categoriaEIdiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Mantenedor m = new Mantenedor();
+            m.Show();
+        }
     }
 }
