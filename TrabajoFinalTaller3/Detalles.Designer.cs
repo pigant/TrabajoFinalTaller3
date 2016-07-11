@@ -29,18 +29,11 @@
         private void InitializeComponent()
         {
             this.grpDetalles = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grpCategorias = new System.Windows.Forms.GroupBox();
-            this.chkHeroes = new System.Windows.Forms.CheckBox();
-            this.chkHorror = new System.Windows.Forms.CheckBox();
-            this.chkRomantica = new System.Windows.Forms.CheckBox();
-            this.chkMagia = new System.Windows.Forms.CheckBox();
-            this.chkRobots = new System.Windows.Forms.CheckBox();
-            this.chkDrama = new System.Windows.Forms.CheckBox();
-            this.chkSciFi = new System.Windows.Forms.CheckBox();
-            this.chkPelea = new System.Windows.Forms.CheckBox();
-            this.chkAccion = new System.Windows.Forms.CheckBox();
-            this.chkComedia = new System.Windows.Forms.CheckBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblComentario = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.cmbFecha = new System.Windows.Forms.DateTimePicker();
             this.cmbClase = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
@@ -53,24 +46,30 @@
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
-            this.lblComentario = new System.Windows.Forms.Label();
-            this.txtComentario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listCategorias = new System.Windows.Forms.ListBox();
+            this.listIdiomas = new System.Windows.Forms.ListBox();
+            this.listSubtitulos = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCategorias = new System.Windows.Forms.Label();
             this.grpDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.grpCategorias.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDetalles
             // 
+            this.grpDetalles.Controls.Add(this.label3);
+            this.grpDetalles.Controls.Add(this.label2);
+            this.grpDetalles.Controls.Add(this.lblCategorias);
+            this.grpDetalles.Controls.Add(this.listSubtitulos);
+            this.grpDetalles.Controls.Add(this.listIdiomas);
+            this.grpDetalles.Controls.Add(this.listCategorias);
             this.grpDetalles.Controls.Add(this.btnCancelar);
             this.grpDetalles.Controls.Add(this.label1);
             this.grpDetalles.Controls.Add(this.txtCantidad);
             this.grpDetalles.Controls.Add(this.lblComentario);
             this.grpDetalles.Controls.Add(this.txtComentario);
-            this.grpDetalles.Controls.Add(this.grpCategorias);
             this.grpDetalles.Controls.Add(this.cmbFecha);
             this.grpDetalles.Controls.Add(this.cmbClase);
             this.grpDetalles.Controls.Add(this.cmbTipo);
@@ -86,137 +85,52 @@
             this.grpDetalles.Controls.Add(this.pictureBox1);
             this.grpDetalles.Location = new System.Drawing.Point(12, 12);
             this.grpDetalles.Name = "grpDetalles";
-            this.grpDetalles.Size = new System.Drawing.Size(568, 392);
+            this.grpDetalles.Size = new System.Drawing.Size(568, 453);
             this.grpDetalles.TabIndex = 0;
             this.grpDetalles.TabStop = false;
             this.grpDetalles.Text = "Detalles";
             // 
-            // pictureBox1
+            // btnCancelar
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 247);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnCancelar.Location = new System.Drawing.Point(467, 411);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 49;
+            this.btnCancelar.Text = "Cerrar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // grpCategorias
+            // label1
             // 
-            this.grpCategorias.Controls.Add(this.chkHeroes);
-            this.grpCategorias.Controls.Add(this.chkHorror);
-            this.grpCategorias.Controls.Add(this.chkRomantica);
-            this.grpCategorias.Controls.Add(this.chkMagia);
-            this.grpCategorias.Controls.Add(this.chkRobots);
-            this.grpCategorias.Controls.Add(this.chkDrama);
-            this.grpCategorias.Controls.Add(this.chkSciFi);
-            this.grpCategorias.Controls.Add(this.chkPelea);
-            this.grpCategorias.Controls.Add(this.chkAccion);
-            this.grpCategorias.Controls.Add(this.chkComedia);
-            this.grpCategorias.Location = new System.Drawing.Point(253, 243);
-            this.grpCategorias.Name = "grpCategorias";
-            this.grpCategorias.Size = new System.Drawing.Size(186, 132);
-            this.grpCategorias.TabIndex = 44;
-            this.grpCategorias.TabStop = false;
-            this.grpCategorias.Text = "Categorias";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(420, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Cantidad";
             // 
-            // chkHeroes
+            // txtCantidad
             // 
-            this.chkHeroes.AutoSize = true;
-            this.chkHeroes.Location = new System.Drawing.Point(90, 111);
-            this.chkHeroes.Name = "chkHeroes";
-            this.chkHeroes.Size = new System.Drawing.Size(60, 17);
-            this.chkHeroes.TabIndex = 11;
-            this.chkHeroes.Text = "Heroes";
-            this.chkHeroes.UseVisualStyleBackColor = true;
+            this.txtCantidad.Location = new System.Drawing.Point(475, 166);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(50, 20);
+            this.txtCantidad.TabIndex = 47;
             // 
-            // chkHorror
+            // lblComentario
             // 
-            this.chkHorror.AutoSize = true;
-            this.chkHorror.Location = new System.Drawing.Point(90, 88);
-            this.chkHorror.Name = "chkHorror";
-            this.chkHorror.Size = new System.Drawing.Size(55, 17);
-            this.chkHorror.TabIndex = 10;
-            this.chkHorror.Text = "Horror";
-            this.chkHorror.UseVisualStyleBackColor = true;
+            this.lblComentario.AutoSize = true;
+            this.lblComentario.Location = new System.Drawing.Point(250, 242);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Size = new System.Drawing.Size(60, 13);
+            this.lblComentario.TabIndex = 46;
+            this.lblComentario.Text = "Comentario";
             // 
-            // chkRomantica
+            // txtComentario
             // 
-            this.chkRomantica.AutoSize = true;
-            this.chkRomantica.Location = new System.Drawing.Point(90, 65);
-            this.chkRomantica.Name = "chkRomantica";
-            this.chkRomantica.Size = new System.Drawing.Size(77, 17);
-            this.chkRomantica.TabIndex = 9;
-            this.chkRomantica.Text = "Romantica";
-            this.chkRomantica.UseVisualStyleBackColor = true;
-            // 
-            // chkMagia
-            // 
-            this.chkMagia.AutoSize = true;
-            this.chkMagia.Location = new System.Drawing.Point(90, 42);
-            this.chkMagia.Name = "chkMagia";
-            this.chkMagia.Size = new System.Drawing.Size(55, 17);
-            this.chkMagia.TabIndex = 7;
-            this.chkMagia.Text = "Magia";
-            this.chkMagia.UseVisualStyleBackColor = true;
-            // 
-            // chkRobots
-            // 
-            this.chkRobots.AutoSize = true;
-            this.chkRobots.Location = new System.Drawing.Point(6, 111);
-            this.chkRobots.Name = "chkRobots";
-            this.chkRobots.Size = new System.Drawing.Size(60, 17);
-            this.chkRobots.TabIndex = 6;
-            this.chkRobots.Text = "Robots";
-            this.chkRobots.UseVisualStyleBackColor = true;
-            // 
-            // chkDrama
-            // 
-            this.chkDrama.AutoSize = true;
-            this.chkDrama.Location = new System.Drawing.Point(90, 19);
-            this.chkDrama.Name = "chkDrama";
-            this.chkDrama.Size = new System.Drawing.Size(57, 17);
-            this.chkDrama.TabIndex = 5;
-            this.chkDrama.Text = "Drama";
-            this.chkDrama.UseVisualStyleBackColor = true;
-            // 
-            // chkSciFi
-            // 
-            this.chkSciFi.AutoSize = true;
-            this.chkSciFi.Location = new System.Drawing.Point(6, 88);
-            this.chkSciFi.Name = "chkSciFi";
-            this.chkSciFi.Size = new System.Drawing.Size(52, 17);
-            this.chkSciFi.TabIndex = 4;
-            this.chkSciFi.Text = "Sci-Fi";
-            this.chkSciFi.UseVisualStyleBackColor = true;
-            // 
-            // chkPelea
-            // 
-            this.chkPelea.AutoSize = true;
-            this.chkPelea.Location = new System.Drawing.Point(6, 65);
-            this.chkPelea.Name = "chkPelea";
-            this.chkPelea.Size = new System.Drawing.Size(53, 17);
-            this.chkPelea.TabIndex = 3;
-            this.chkPelea.Text = "Pelea";
-            this.chkPelea.UseVisualStyleBackColor = true;
-            // 
-            // chkAccion
-            // 
-            this.chkAccion.AutoSize = true;
-            this.chkAccion.Location = new System.Drawing.Point(6, 42);
-            this.chkAccion.Name = "chkAccion";
-            this.chkAccion.Size = new System.Drawing.Size(59, 17);
-            this.chkAccion.TabIndex = 2;
-            this.chkAccion.Text = "Accion";
-            this.chkAccion.UseVisualStyleBackColor = true;
-            // 
-            // chkComedia
-            // 
-            this.chkComedia.AutoSize = true;
-            this.chkComedia.Location = new System.Drawing.Point(6, 19);
-            this.chkComedia.Name = "chkComedia";
-            this.chkComedia.Size = new System.Drawing.Size(67, 17);
-            this.chkComedia.TabIndex = 1;
-            this.chkComedia.Text = "Comedia";
-            this.chkComedia.UseVisualStyleBackColor = true;
+            this.txtComentario.Location = new System.Drawing.Point(253, 258);
+            this.txtComentario.Multiline = true;
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(272, 51);
+            this.txtComentario.TabIndex = 45;
             // 
             // cmbFecha
             // 
@@ -316,61 +230,76 @@
             this.Titulo.TabIndex = 32;
             this.Titulo.Text = "Titulo";
             // 
-            // lblComentario
+            // pictureBox1
             // 
-            this.lblComentario.AutoSize = true;
-            this.lblComentario.Location = new System.Drawing.Point(16, 284);
-            this.lblComentario.Name = "lblComentario";
-            this.lblComentario.Size = new System.Drawing.Size(60, 13);
-            this.lblComentario.TabIndex = 46;
-            this.lblComentario.Text = "Comentario";
+            this.pictureBox1.Location = new System.Drawing.Point(19, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 247);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // txtComentario
+            // listCategorias
             // 
-            this.txtComentario.Location = new System.Drawing.Point(19, 300);
-            this.txtComentario.Multiline = true;
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(203, 75);
-            this.txtComentario.TabIndex = 45;
+            this.listCategorias.FormattingEnabled = true;
+            this.listCategorias.Location = new System.Drawing.Point(11, 339);
+            this.listCategorias.Name = "listCategorias";
+            this.listCategorias.Size = new System.Drawing.Size(133, 108);
+            this.listCategorias.TabIndex = 50;
             // 
-            // label1
+            // listIdiomas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Cantidad";
+            this.listIdiomas.FormattingEnabled = true;
+            this.listIdiomas.Location = new System.Drawing.Point(150, 339);
+            this.listIdiomas.Name = "listIdiomas";
+            this.listIdiomas.Size = new System.Drawing.Size(133, 108);
+            this.listIdiomas.TabIndex = 50;
             // 
-            // txtCantidad
+            // listSubtitulos
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(475, 166);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(50, 20);
-            this.txtCantidad.TabIndex = 47;
+            this.listSubtitulos.FormattingEnabled = true;
+            this.listSubtitulos.Location = new System.Drawing.Point(289, 339);
+            this.listSubtitulos.Name = "listSubtitulos";
+            this.listSubtitulos.Size = new System.Drawing.Size(133, 108);
+            this.listSubtitulos.TabIndex = 50;
             // 
-            // btnCancelar
+            // label3
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(467, 352);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 49;
-            this.btnCancelar.Text = "Cerrar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(289, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Subtitulos";
             // 
-            // detalles
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(147, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Audio";
+            // 
+            // lblCategorias
+            // 
+            this.lblCategorias.AutoSize = true;
+            this.lblCategorias.Location = new System.Drawing.Point(8, 323);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.Size = new System.Drawing.Size(60, 13);
+            this.lblCategorias.TabIndex = 53;
+            this.lblCategorias.Text = "Comentario";
+            // 
+            // Detalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 416);
+            this.ClientSize = new System.Drawing.Size(592, 478);
             this.Controls.Add(this.grpDetalles);
-            this.Name = "detalles";
+            this.Name = "Detalles";
             this.Text = "detalles";
             this.grpDetalles.ResumeLayout(false);
             this.grpDetalles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.grpCategorias.ResumeLayout(false);
-            this.grpCategorias.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -384,17 +313,6 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblComentario;
         private System.Windows.Forms.TextBox txtComentario;
-        private System.Windows.Forms.GroupBox grpCategorias;
-        private System.Windows.Forms.CheckBox chkHeroes;
-        private System.Windows.Forms.CheckBox chkHorror;
-        private System.Windows.Forms.CheckBox chkRomantica;
-        private System.Windows.Forms.CheckBox chkMagia;
-        private System.Windows.Forms.CheckBox chkRobots;
-        private System.Windows.Forms.CheckBox chkDrama;
-        private System.Windows.Forms.CheckBox chkSciFi;
-        private System.Windows.Forms.CheckBox chkPelea;
-        private System.Windows.Forms.CheckBox chkAccion;
-        private System.Windows.Forms.CheckBox chkComedia;
         private System.Windows.Forms.DateTimePicker cmbFecha;
         private System.Windows.Forms.ComboBox cmbClase;
         private System.Windows.Forms.ComboBox cmbTipo;
@@ -407,5 +325,11 @@
         private System.Windows.Forms.Label lblUbicacion;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label Titulo;
+        private System.Windows.Forms.ListBox listCategorias;
+        private System.Windows.Forms.ListBox listSubtitulos;
+        private System.Windows.Forms.ListBox listIdiomas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCategorias;
     }
 }

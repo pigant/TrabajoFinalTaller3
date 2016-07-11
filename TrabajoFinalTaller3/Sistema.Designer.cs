@@ -36,6 +36,7 @@
             this.verTitulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenedorDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.developerToolStripMenuItem,
             this.verTitulosToolStripMenuItem,
             this.editarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
+            this.eliminarToolStripMenuItem,
+            this.mantenedorDelSistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -103,6 +105,12 @@
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
+            // mantenedorDelSistemaToolStripMenuItem
+            // 
+            this.mantenedorDelSistemaToolStripMenuItem.Name = "mantenedorDelSistemaToolStripMenuItem";
+            this.mantenedorDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.mantenedorDelSistemaToolStripMenuItem.Text = "Mantenedor del Sistema";
+            // 
             // Sistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem verTitulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenedorDelSistemaToolStripMenuItem;
     }
 }
 
