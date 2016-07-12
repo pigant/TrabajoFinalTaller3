@@ -35,7 +35,7 @@ namespace TrabajoFinalTaller3
             
             if (dialogResult == DialogResult.Yes)
                 {
-                    TituloService.delete(t.IdTitulo);
+                    TituloService.Delete(t.IdTitulo);
                 }
             else if (dialogResult == DialogResult.No)
                 {
