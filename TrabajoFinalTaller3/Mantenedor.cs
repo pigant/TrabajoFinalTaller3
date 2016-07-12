@@ -21,26 +21,33 @@ namespace TrabajoFinalTaller3
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Object o = null;
+            String nombre = txtNombre.Text;
+            if(nombre.Length == 0)
+            {
+                MessageBox.Show("Para agregar, el campo de nombre no puede estar vacio");
+                txtNombre.Select();
+                return;
+            }
 
             switch (cmbItem.SelectedIndex)
             {
                 case 0:
-                    Idioma i = new Idioma(txtNombre.Text);
+                    Idioma i = new Idioma(nombre);
                     IdiomaService.Create(i);
                     o = i;
                     break;
                 case 1:
-                    Categoria c = new Categoria(txtNombre.Text);
+                    Categoria c = new Categoria(nombre);
                     CategoriaService.Create(c);
                     o = c;
                     break;
                 case 2:
-                    Tipo t = new Tipo(txtNombre.Text);
+                    Tipo t = new Tipo(nombre);
                     TipoService.Create(t);
                     o = t;
                     break;
                 case 3:
-                    Clase cl = new Clase(txtNombre.Text);
+                    Clase cl = new Clase(nombre);
                     ClaseService.Create(cl);
                     o = cl;
                     break;
@@ -80,26 +87,33 @@ namespace TrabajoFinalTaller3
         private void btnCambiar_Click(object sender, EventArgs e)
         {
             var selected = chklistMostrar.SelectedItem;
+            String texto = txtNombre.Text;
+            if(texto.Length == 0)
+            {
+                MessageBox.Show("Para cambiar, el campo de nombre no puede estar vacio");
+                txtNombre.Select();
+                return;
+            }
             switch (cmbItem.SelectedIndex)
             {
                 case 0:
                     Idioma i = (Idioma)selected;
-                    i.Nombre = txtNombre.Text;
+                    i.Nombre = texto;
                     IdiomaService.Update(i);
                     break;
                 case 1:
                     Categoria c = (Categoria)selected;
-                    c.Nombre = txtNombre.Text;
+                    c.Nombre = texto;
                     CategoriaService.Update(c);
                     break;
                 case 2:
                     Tipo t = (Tipo)selected;
-                    t.Nombre = txtNombre.Text;
+                    t.Nombre = texto;
                     TipoService.Update(t);
                     break;
                 case 3:
                     Clase cl = (Clase)selected;
-                    cl.Nombre = txtNombre.Text;
+                    cl.Nombre = texto;
                     ClaseService.Update(cl);
                     break;
             }
