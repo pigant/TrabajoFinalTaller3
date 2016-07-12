@@ -112,7 +112,7 @@ namespace TrabajoFinalTaller3
             }
             catch (Exception)
             {
-                MessageBox.Show("Evaluacion debe ser numerico de 1 a 5");
+                MessageBox.Show("Evaluacion debe ser de 1,0 a 5,0");
                 txtEvaluacion.Select();
                 return;
             }
@@ -129,7 +129,31 @@ namespace TrabajoFinalTaller3
             subtitulosSeleccionados.ForEach((a) => TituloService.CreateRelationSubtitulo(t.IdTitulo, a.IdIdioma));
             audioSeleccionados.ForEach((a) => TituloService.CreateRelationAudio(t.IdTitulo, a.IdIdioma));
             MessageBox.Show("Titulo ingresado");
-            this.Close();
+
+            //******************************************************
+            //Reset el formulario para dejarlo en blanco para un siguiente ingreso
+            //
+            txtTitulo.Text = "";
+            txtCantidad.Text= "";
+            txtComentario.Text="";
+            txtUbicacion.Text = "";
+
+            listaClases = ClaseService.FindAll();
+            listaTipos = TipoService.FindAll();
+            listaIdiomas = IdiomaService.FindAll();
+            listaCategorias = CategoriaService.FindAll();
+            //Relleno de componentes
+            cmbTipo.DataSource = listaTipos;
+            cmbClase.DataSource = listaClases;
+            var audioLista = chkListAudio.Items;
+            var subLista = chkListSubtitulos.Items;
+            var cateLista = chkListCategorias.Items;
+            listaIdiomas.ForEach((a) => audioLista.Add(a));
+            listaIdiomas.ForEach((a) => subLista.Add(a));
+            listaCategorias.ForEach((a) => cateLista.Add(a));
+            txtTitulo.Select();
+
+            //this.Close();
         }
 
         private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)

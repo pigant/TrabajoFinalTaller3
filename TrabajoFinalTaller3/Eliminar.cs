@@ -20,7 +20,9 @@ namespace TrabajoFinalTaller3
 
         private void Eliminar_Load(object sender, EventArgs e)
         {
-
+            List<Titulo> lista = TituloService.FindAll();
+            lista.Reverse();
+            lbxMostrar.DataSource = lista;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
