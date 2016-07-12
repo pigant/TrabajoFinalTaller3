@@ -53,17 +53,73 @@ namespace TrabajoFinalTaller3
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            //*******************
             //Atributos de Titulo
+            //*******************
             String titulo = txtTitulo.Text;
             Tipo tipo = (Tipo)cmbTipo.SelectedItem;
             Clase clase = (Clase)cmbClase.SelectedItem;
-            int cantidad = Convert.ToInt32(txtCantidad.Text);
+            Int32 cantidad = -1;
+            String cantidadTexto = txtCantidad.Text;
             var fechaRaw = cmbFecha.Value;
             String fecha = "" + fechaRaw.Year + '/' + fechaRaw.Month + '/' + fechaRaw.Day;
             String ubicacion = txtUbicacion.Text;
-            Int32 evaluacion = Convert.ToInt32(txtEvaluacion.Text);
+            Int32 evaluacion;
+            String evaluacionTexto = txtEvaluacion.Text;
             String comentario = txtComentario.Text;
+            //**************
+            //Comprobaciones
+            //**************
+            //Comprobacion de titulo vacio
+            if (titulo.Equals(""))
+            {
+                MessageBox.Show("Complete el campo titulo");
+                txtTitulo.Select();
+                return;
+            }
+            //Comprobacion de tipo vacio
+            if(tipo == null)
+            {
+                MessageBox.Show("Seleccione un tipo");
+                cmbTipo.Select();
+                return;
+            }
+            //Comprobacion de clase vacio
+            if(clase == null)
+            {
+                MessageBox.Show("Seleccione una clase");
+                cmbClase.Select();
+                return;
+            }
+            //Comprobacion de cantidad con formato de numero
+            try
+            {
+                cantidad = Convert.ToInt32(cantidadTexto);
+                if (cantidad < 1)
+                    throw new FormatException();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cantidad debe ser entera positiva y no excesivamente grande");
+                txtCantidad.Select();
+                return;
+            }
+            //Comprobacion de evaluacion con formato de numero
+            try
+            {
+                evaluacion = Convert.ToInt32(evaluacionTexto);
+                if (evaluacion < 1 && evaluacion > 5)
+                    throw new FormatException();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Evaluacion debe ser numerico de 1 a 5");
+                txtEvaluacion.Select();
+                return;
+            }
+            //******************************************************
             //Definicion del objeto y obtencion del id (dentro de t)
+            //******************************************************
             Titulo t = new Titulo(titulo, clase.IdClase, tipo.IdTipo, fecha, comentario, evaluacion, ubicacion, cantidad);
             TituloService.create(t);
             //Relaciones muchos a muchos con titulo
