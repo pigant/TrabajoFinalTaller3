@@ -40,7 +40,7 @@ namespace TrabajoFinalTaller3
             txtComentario.Text = t.Comentarios;
             txtUbicacion.Text = t.Ubicacion;
             txtEvaluacion.Text = t.Evaluacion.ToString();
-            txtFecha.Text = t.FechaLanzamiento.Split(' ')[0];
+            txtFecha.Text = t.FechaLanzamientoString;
             listCategorias.DataSource = CategoriaService.findByTituloId(id);
             listAudio.DataSource = IdiomaService.FindAudioByTituloId(id);
             listSubtitulos.DataSource = IdiomaService.FindSubtituloByTituloId(id);

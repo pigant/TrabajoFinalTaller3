@@ -86,9 +86,9 @@
             this.grpDetalles.Controls.Add(this.Titulo);
             this.grpDetalles.Controls.Add(this.pictureBox1);
             this.grpDetalles.Location = new System.Drawing.Point(16, 165);
-            this.grpDetalles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpDetalles.Margin = new System.Windows.Forms.Padding(4);
             this.grpDetalles.Name = "grpDetalles";
-            this.grpDetalles.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpDetalles.Padding = new System.Windows.Forms.Padding(4);
             this.grpDetalles.Size = new System.Drawing.Size(757, 558);
             this.grpDetalles.TabIndex = 0;
             this.grpDetalles.TabStop = false;
@@ -96,10 +96,11 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(389, 112);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Location = new System.Drawing.Point(388, 113);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(161, 22);
+            this.txtFecha.ReadOnly = true;
+            this.txtFecha.Size = new System.Drawing.Size(163, 22);
             this.txtFecha.TabIndex = 54;
             // 
             // label3
@@ -137,7 +138,7 @@
             this.listSubtitulos.FormattingEnabled = true;
             this.listSubtitulos.ItemHeight = 16;
             this.listSubtitulos.Location = new System.Drawing.Point(385, 417);
-            this.listSubtitulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listSubtitulos.Margin = new System.Windows.Forms.Padding(4);
             this.listSubtitulos.Name = "listSubtitulos";
             this.listSubtitulos.Size = new System.Drawing.Size(176, 132);
             this.listSubtitulos.TabIndex = 50;
@@ -147,7 +148,7 @@
             this.listAudio.FormattingEnabled = true;
             this.listAudio.ItemHeight = 16;
             this.listAudio.Location = new System.Drawing.Point(200, 417);
-            this.listAudio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listAudio.Margin = new System.Windows.Forms.Padding(4);
             this.listAudio.Name = "listAudio";
             this.listAudio.Size = new System.Drawing.Size(176, 132);
             this.listAudio.TabIndex = 50;
@@ -157,7 +158,7 @@
             this.listCategorias.FormattingEnabled = true;
             this.listCategorias.ItemHeight = 16;
             this.listCategorias.Location = new System.Drawing.Point(15, 417);
-            this.listCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.listCategorias.Name = "listCategorias";
             this.listCategorias.Size = new System.Drawing.Size(176, 132);
             this.listCategorias.TabIndex = 50;
@@ -165,7 +166,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(623, 506);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 28);
             this.btnCancelar.TabIndex = 49;
@@ -186,8 +187,9 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(633, 204);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = true;
             this.txtCantidad.Size = new System.Drawing.Size(65, 22);
             this.txtCantidad.TabIndex = 47;
             // 
@@ -204,9 +206,10 @@
             // txtComentario
             // 
             this.txtComentario.Location = new System.Drawing.Point(337, 318);
-            this.txtComentario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtComentario.Margin = new System.Windows.Forms.Padding(4);
             this.txtComentario.Multiline = true;
             this.txtComentario.Name = "txtComentario";
+            this.txtComentario.ReadOnly = true;
             this.txtComentario.Size = new System.Drawing.Size(361, 62);
             this.txtComentario.TabIndex = 45;
             // 
@@ -215,7 +218,7 @@
             this.cmbClase.Enabled = false;
             this.cmbClase.FormattingEnabled = true;
             this.cmbClase.Location = new System.Drawing.Point(388, 204);
-            this.cmbClase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbClase.Margin = new System.Windows.Forms.Padding(4);
             this.cmbClase.Name = "cmbClase";
             this.cmbClase.Size = new System.Drawing.Size(163, 24);
             this.cmbClase.TabIndex = 41;
@@ -225,7 +228,7 @@
             this.cmbTipo.Enabled = false;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(388, 154);
-            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(163, 24);
             this.cmbTipo.TabIndex = 42;
@@ -263,8 +266,9 @@
             // txtEvaluacion
             // 
             this.txtEvaluacion.Location = new System.Drawing.Point(337, 267);
-            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtEvaluacion.Name = "txtEvaluacion";
+            this.txtEvaluacion.ReadOnly = true;
             this.txtEvaluacion.Size = new System.Drawing.Size(163, 22);
             this.txtEvaluacion.TabIndex = 37;
             // 
@@ -281,8 +285,9 @@
             // txtUbicacion
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(536, 267);
-            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.ReadOnly = true;
             this.txtUbicacion.Size = new System.Drawing.Size(163, 22);
             this.txtUbicacion.TabIndex = 35;
             // 
@@ -299,8 +304,9 @@
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(337, 62);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.ReadOnly = true;
             this.txtTitulo.Size = new System.Drawing.Size(384, 22);
             this.txtTitulo.TabIndex = 33;
             // 
@@ -320,7 +326,7 @@
             this.pictureBox1.Image = global::TrabajoFinalTaller3.Properties.Resources.th;
             this.pictureBox1.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.th;
             this.pictureBox1.Location = new System.Drawing.Point(25, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 304);
             this.pictureBox1.TabIndex = 0;
@@ -332,7 +338,7 @@
             this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(757, 143);
             this.pictureBox2.TabIndex = 54;
@@ -346,7 +352,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDetalles);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(794, 762);
             this.MinimumSize = new System.Drawing.Size(794, 762);

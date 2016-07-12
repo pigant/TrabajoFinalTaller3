@@ -61,10 +61,9 @@ namespace TrabajoFinalTaller3
             Clase clase = (Clase)cmbClase.SelectedItem;
             Int32 cantidad = -1;
             String cantidadTexto = txtCantidad.Text;
-            var fechaRaw = cmbFecha.Value;
-            String fecha = "" + fechaRaw.Year + '/' + fechaRaw.Month + '/' + fechaRaw.Day;
+            DateTime fecha = cmbFecha.Value;
             String ubicacion = txtUbicacion.Text;
-            Int32 evaluacion;
+            Decimal evaluacion;
             String evaluacionTexto = txtEvaluacion.Text;
             String comentario = txtComentario.Text;
             //**************
@@ -107,7 +106,7 @@ namespace TrabajoFinalTaller3
             //Comprobacion de evaluacion con formato de numero
             try
             {
-                evaluacion = Convert.ToInt32(evaluacionTexto);
+                evaluacion = Convert.ToDecimal(evaluacionTexto);
                 if (evaluacion < 1 && evaluacion > 5)
                     throw new FormatException();
             }
@@ -130,6 +129,12 @@ namespace TrabajoFinalTaller3
             subtitulosSeleccionados.ForEach((a) => TituloService.CreateRelationSubtitulo(t.IdTitulo, a.IdIdioma));
             audioSeleccionados.ForEach((a) => TituloService.CreateRelationAudio(t.IdTitulo, a.IdIdioma));
             MessageBox.Show("Titulo ingresado");
+            this.Close();
+        }
+
+        private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Int32 largo = txtTitulo.Text.Length;
         }
     }
 }
