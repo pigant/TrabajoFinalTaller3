@@ -25,5 +25,24 @@ namespace TrabajoFinalTaller3
         {
             this.Close();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var item = lbxMostrar.Items;
+            List<Titulo> lista = TituloService.FindLike(txtBuscar.Text);
+            item.Clear();
+            lista.ForEach((a) => item.Add(a));
+        }
+        private void MostrarForm_Load(object sender, EventArgs e)
+        {
+            List<Titulo> lista = TituloService.FindAll();
+            var item = lbxMostrar.Items;
+            lista.ForEach((a) => item.Add(a));
+        }
     }
 }
