@@ -36,8 +36,11 @@ namespace TrabajoFinalTaller3
         private void lbxMostrar_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Titulo t = (Titulo)lbxMostrar.SelectedItem;
-            DetallesForm d = new DetallesForm(t.IdTitulo);
-            d.Show();
+            if (t != null)
+            {
+                DetallesForm d = new DetallesForm(t.IdTitulo);
+                d.Show();
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
