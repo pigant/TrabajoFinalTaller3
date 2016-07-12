@@ -117,8 +117,15 @@ namespace Servicios.servicios
         
         public static void delete(Int32 id)
         {
-            String consulta = String.Format("delete from titulo where id_titulo={0}", id);
+            String consulta;
             ConexionDB db = new ConexionDB();
+            consulta = String.Format("delete from titulo_idioma_aud where id_titulo={0}", id);
+            db.OperacionesNonQuery(consulta);
+            consulta = String.Format("delete from titulo_idioma_sub where id_titulo={0}", id);
+            db.OperacionesNonQuery(consulta);
+            consulta = String.Format("delete from titulo_categoria where id_titulo={0}", id);
+            db.OperacionesNonQuery(consulta);
+            consulta = String.Format("delete from titulo where id_titulo={0}", id);
             db.OperacionesNonQuery(consulta);
         }
         
