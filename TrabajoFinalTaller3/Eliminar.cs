@@ -20,7 +20,9 @@ namespace TrabajoFinalTaller3
 
         private void Eliminar_Load(object sender, EventArgs e)
         {
-
+            List<Titulo> lista = TituloService.FindAll();
+            lista.Reverse();
+            lbxMostrar.DataSource = lista;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace TrabajoFinalTaller3
             
             if (dialogResult == DialogResult.Yes)
                 {
-                    TituloService.delete(t.IdTitulo);
+                    TituloService.Delete(t.IdTitulo);
                 }
             else if (dialogResult == DialogResult.No)
                 {
