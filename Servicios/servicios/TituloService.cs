@@ -135,7 +135,7 @@ namespace Servicios.servicios
                 +"evaluacion={4},ubicacion='{5}',cantidad={6},id_tipo={7},"
                 +"id_clase={8} where id_titulo={0}", 
                 titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamientoString, titulo.Comentarios, 
-                titulo.Evaluacion, titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
+                titulo.Evaluacion.ToString().Replace(',', '.'), titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);
         }

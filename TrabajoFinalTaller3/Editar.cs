@@ -61,7 +61,7 @@ namespace TrabajoFinalTaller3
             txtUbicacion.Text = t.Ubicacion;
             txtComentario.Text = t.Comentarios;
             txtCantidad.Value = t.Cantidad;
-            txtEvaluacion.Value = t.Cantidad;
+            txtEvaluacion.Value = t.Evaluacion;
             cmbFecha.Value = t.FechaLanzamiento;
             for (int i = 0; i < listaTipos.Count; i++)
             {
