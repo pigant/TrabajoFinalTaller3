@@ -133,11 +133,6 @@ namespace TrabajoFinalTaller3
             //******************************************************
             //Reset el formulario para dejarlo en blanco para un siguiente ingreso
             //
-            txtTitulo.Text = "";
-            txtCantidad.Text= "";
-            txtComentario.Text="";
-            txtUbicacion.Text = "";
-
             listaClases = ClaseService.FindAll();
             listaTipos = TipoService.FindAll();
             listaIdiomas = IdiomaService.FindAll();
@@ -148,11 +143,18 @@ namespace TrabajoFinalTaller3
             var audioLista = chkListAudio.Items;
             var subLista = chkListSubtitulos.Items;
             var cateLista = chkListCategorias.Items;
-            listaIdiomas.ForEach((a) => audioLista.Add(a));
-            listaIdiomas.ForEach((a) => subLista.Add(a));
-            listaCategorias.ForEach((a) => cateLista.Add(a));
+            audioLista.Clear();
+            subLista.Clear();
+            cateLista.Clear();
+            listaIdiomas.ForEach((a) => audioLista.Add(a, false));
+            listaIdiomas.ForEach((a) => subLista.Add(a, false));
+            listaCategorias.ForEach((a) => cateLista.Add(a, false));
             txtTitulo.Select();
 
+            txtTitulo.Text = "";
+            txtCantidad.Text = "";
+            txtComentario.Text = "";
+            txtUbicacion.Text = "";
             //this.Close();
         }
 
