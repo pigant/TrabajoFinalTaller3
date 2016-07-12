@@ -12,15 +12,15 @@ namespace Servicios.entidades
         /* Definicion de parametros de clase */
         /**********************************************************/
         #region
-        private int idTitulo;
+        private Int32 idTitulo;
         private String nombreTitulo;
-        private int idClase;
-        private int idTipo;
+        private Int32 idClase;
+        private Int32 idTipo;
         private String fechaLanzamiento;
         private String comentarios;
-        private int evaluacion;
+        private Int32 evaluacion;
         private String ubicacion;
-        private int cantidad;
+        private Int32 cantidad;
         #endregion
 
         /**********************************************************/
@@ -32,7 +32,7 @@ namespace Servicios.entidades
 
         }
 
-        public Titulo(String titulo, int idClase, int idTipo, String fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
+        public Titulo(String titulo, Int32 idClase, Int32 idTipo, String fechaLanzamiento, String comentarios, Int32 evaluacion, String ubicacion, Int32 cantidad)
         {
             NombreTitulo = titulo;
             IdClase = idClase;
@@ -44,9 +44,9 @@ namespace Servicios.entidades
             Cantidad = cantidad;
         }
 
-        public Titulo(Int32 id, String titulo, int idClase, int idTipo, String fechaLanzamiento, String comentarios, int evaluacion, String ubicacion, int cantidad)
+        public Titulo(Int32 id, String titulo, Int32 idClase, Int32 idTipo, String fechaLanzamiento, String comentarios, Int32 evaluacion, String ubicacion, Int32 cantidad)
         {
-            IdTitulo = idTitulo;
+            IdTitulo = id;
             NombreTitulo = titulo;
             IdClase = idClase;
             IdTipo = idTipo;
@@ -88,7 +88,7 @@ namespace Servicios.entidades
             }
         }
 
-        public int IdClase
+        public Int32 IdClase
         {
             get
             {
@@ -101,7 +101,7 @@ namespace Servicios.entidades
             }
         }
 
-        public int IdTipo
+        public Int32 IdTipo
         {
             get
             {
@@ -140,7 +140,7 @@ namespace Servicios.entidades
             }
         }
 
-        public int Evaluacion
+        public Int32 Evaluacion
         {
             get
             {
@@ -166,7 +166,7 @@ namespace Servicios.entidades
             }
         }
 
-        public int IdTitulo
+        public Int32 IdTitulo
         {
             get
             {
@@ -179,7 +179,7 @@ namespace Servicios.entidades
             }
         }
 
-        public int Cantidad
+        public Int32 Cantidad
         {
             get
             {

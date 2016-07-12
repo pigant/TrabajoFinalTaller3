@@ -1,6 +1,6 @@
 ﻿namespace TrabajoFinalTaller3
 {
-    partial class Detalles
+    partial class DetallesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -306,19 +306,20 @@
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
-            // Detalles
+            // DetallesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 599);
+            this.ClientSize = new System.Drawing.Size(584, 587);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDetalles);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 626);
             this.MinimumSize = new System.Drawing.Size(600, 626);
-            this.Name = "Detalles";
+            this.Name = "DetallesForm";
             this.Text = "detalles";
+            this.Load += new System.EventHandler(this.DetallesForm_Load);
             this.grpDetalles.ResumeLayout(false);
             this.grpDetalles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

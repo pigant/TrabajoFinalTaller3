@@ -22,7 +22,7 @@ namespace Servicios.servicios
         public static Titulo FindById(Int32 id)
         {
             Titulo c = null;
-            String comando = String.Format("select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion, cantidad from titulo where id_titulo={0}", id);
+            String comando = String.Format("select titulo, id_clase, id_tipo, fecha, comentario, evaluacion, ubicacion, cantidad from titulo where id_titulo={0}", id);
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
@@ -33,7 +33,7 @@ namespace Servicios.servicios
                 Int32 idTipo = (Int32) o[2];
                 String fechaLanzamiento = ((DateTime) o[3]).ToString();
                 String comentarios = (String) o[4];
-                Int32 evaluacion = (Int32) o[5];
+                Int32 evaluacion = Convert.ToInt32(o[5]);
                 String ubicacion = (String) o[6];
                 Int32 cantidad = (Int32) o[7];
                 c = new Titulo(
@@ -44,26 +44,56 @@ namespace Servicios.servicios
             return c;
         }
 
-        public static List<Titulo> FindAll(Int32 id)
+        public static List<Titulo> FindAll()
         {
             List<Titulo> l = new List<Titulo>();
-            String comando = "select nombre, id_clase, id_tipo, fecha_nacimiento, comentarios, evaluacion, ubicacion, cantidad from titulo";
+            String comando = "select id_titulo, titulo, id_clase, id_tipo, fecha, comentario, evaluacion, ubicacion, cantidad from titulo";
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
             {
                 foreach (Object[] o in lista)
                 {
+                    Int32 id = (Int32)o[0];
                     String nombre = (String)o[1];
                     Int32 idClase = (Int32)o[2];
                     Int32 idTipo = (Int32)o[3];
                     String fechaLanzamiento = ((DateTime)o[4]).ToString();
                     String comentarios = (String)o[5];
-                    Int32 evaluacion = (Int32)o[6];
+                    Int32 evaluacion = Convert.ToInt32(o[6]);
                     String ubicacion = (String)o[7];
                     Int32 cantidad = (Int32)o[8];
                     Titulo t = new Titulo(
                             id, nombre, idClase, idTipo,
+                            fechaLanzamiento, comentarios,
+                            evaluacion, ubicacion, cantidad);
+                    l.Add(t);
+                }
+            }
+            return l;
+        }
+
+        public static List<Titulo> FindLike(String text)
+        {
+            List<Titulo> l = new List<Titulo>();
+            String comando = String.Format("select id_titulo, titulo, id_clase, id_tipo, fecha, comentario, evaluacion, ubicacion, cantidad from titulo where lower(titulo) like lower('%{0}%')", text);
+            ConexionDB db = new ConexionDB();
+            List<Object[]> lista = db.ObtenerLista(comando);
+            if (lista.Count > 0)
+            {
+                foreach (Object[] o in lista)
+                {
+                    Int32 idTitulo = (Int32)o[0];
+                    String nombre = (String)o[1];
+                    Int32 idClase = (Int32)o[2];
+                    Int32 idTipo = (Int32)o[3];
+                    String fechaLanzamiento = ((DateTime)o[4]).ToString();
+                    String comentarios = (String)o[5];
+                    Int32 evaluacion = Convert.ToInt32(o[6]);
+                    String ubicacion = (String)o[7];
+                    Int32 cantidad = (Int32)o[8];
+                    Titulo t = new Titulo(
+                            idTitulo, nombre, idClase, idTipo,
                             fechaLanzamiento, comentarios,
                             evaluacion, ubicacion, cantidad);
                     l.Add(t);

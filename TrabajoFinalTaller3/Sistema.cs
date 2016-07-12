@@ -43,7 +43,7 @@ namespace TrabajoFinalTaller3
         }
         private void listaDeTitulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Mostrar mostrar = new Mostrar();
+            MostrarForm mostrar = new MostrarForm();
             mostrar.ShowDialog(this); 
         }
         private void editarTituloToolStripMenuItem_Click(object sender, EventArgs e)
