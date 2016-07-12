@@ -102,7 +102,7 @@ namespace Servicios.servicios
             return l;
         }
 
-        public static void create(Titulo titulo)
+        public static void Create(Titulo titulo)
         {
             String consulta = String.Format(
                 "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
@@ -114,7 +114,7 @@ namespace Servicios.servicios
             titulo.IdTitulo = db.OperacionesNonQueryReturnId(consulta);
         }
         
-        public static void delete(Int32 id)
+        public static void Delete(Int32 id)
         {
             String consulta;
             ConexionDB db = new ConexionDB();
@@ -128,7 +128,7 @@ namespace Servicios.servicios
             db.OperacionesNonQuery(consulta);
         }
         
-        public static void update(Titulo titulo)
+        public static void Update(Titulo titulo)
         {
             String consulta = String.Format(
                 "update titulo set titulo='{1}',fecha='{2}',comentario='{3}', "

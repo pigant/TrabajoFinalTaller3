@@ -120,7 +120,7 @@ namespace TrabajoFinalTaller3
             //Definicion del objeto y obtencion del id (dentro de t)
             //******************************************************
             Titulo t = new Titulo(titulo, clase.IdClase, tipo.IdTipo, fecha, comentario, evaluacion, ubicacion, cantidad);
-            TituloService.create(t);
+            TituloService.Create(t);
             //Relaciones muchos a muchos con titulo
             var categoriasSeleccionadas = chkListCategorias.CheckedItems.OfType<Categoria>().ToList<Categoria>();
             var subtitulosSeleccionados = chkListSubtitulos.CheckedItems.OfType<Idioma>().ToList<Idioma>();
