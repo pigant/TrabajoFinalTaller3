@@ -18,6 +18,9 @@ namespace TrabajoFinalTaller3
         private List<Tipo> listaTipos;
         private List<Idioma> listaIdiomas;
         private List<Categoria> listaCategorias;
+        private List<Categoria> listaPreviaCategoriaSeleccionada;
+        private List<Idioma> listaPreviaAudioSeleccionada;
+        private List<Idioma> listaPreviaSubtituloSeleccionada;
         private Int32 id;
 
         public EditarForm(Int32 id)
@@ -77,20 +80,20 @@ namespace TrabajoFinalTaller3
                 }
             }
             //Relaciones
-            var cateList = CategoriaService.findByTituloId(t.IdTitulo);
-            var audList = IdiomaService.FindAudioByTituloId(t.IdTitulo);
-            var subList = IdiomaService.FindSubtituloByTituloId(t.IdTitulo);
-            foreach (var cate in cateList)
+            listaPreviaCategoriaSeleccionada = CategoriaService.findByTituloId(t.IdTitulo);
+            listaPreviaAudioSeleccionada = IdiomaService.FindAudioByTituloId(t.IdTitulo);
+            listaPreviaSubtituloSeleccionada = IdiomaService.FindSubtituloByTituloId(t.IdTitulo);
+            foreach (var cate in listaPreviaCategoriaSeleccionada)
             {
                 Int32 n = chkListCategorias.FindStringExact(cate.Nombre);
                 chkListCategorias.SetItemCheckState(n, CheckState.Checked);
             }
-            foreach (var aud in audList)
+            foreach (var aud in listaPreviaAudioSeleccionada)
             {
                 Int32 n = chkListAudio.FindStringExact(aud.Nombre);
                 chkListAudio.SetItemCheckState(n, CheckState.Checked);
             }
-            foreach (var sub in subList)
+            foreach (var sub in listaPreviaSubtituloSeleccionada)
             {
                 Int32 n = chkListSubtitulos.FindStringExact(sub.Nombre);
                 chkListSubtitulos.SetItemCheckState(n, CheckState.Checked);
@@ -170,15 +173,17 @@ namespace TrabajoFinalTaller3
             //******************************************************
             //Definicion del objeto y obtencion del id (dentro de t)
             //******************************************************
-            Titulo t = new Titulo(titulo, clase.IdClase, tipo.IdTipo, fecha, comentario, evaluacion, ubicacion, cantidad);
-            TituloService.Create(t);
+            Titulo t = new Titulo(id, titulo, clase.IdClase, tipo.IdTipo, fecha, comentario, evaluacion, ubicacion, cantidad);
+            TituloService.Update(t);
+            //Elimina antiguas relaciones
+            TituloService.DeleteRelations(t.IdTitulo);
             //Relaciones muchos a muchos con titulo
-            var categoriasSeleccionadas = chkListCategorias.CheckedItems.OfType<Categoria>().ToList<Categoria>();
-            var subtitulosSeleccionados = chkListSubtitulos.CheckedItems.OfType<Idioma>().ToList<Idioma>();
-            var audioSeleccionados = chkListAudio.CheckedItems.OfType<Idioma>().ToList<Idioma>();
-            categoriasSeleccionadas.ForEach((a) => TituloService.CreateRelationCategoria(t.IdTitulo, a.IdCategoria));
-            subtitulosSeleccionados.ForEach((a) => TituloService.CreateRelationSubtitulo(t.IdTitulo, a.IdIdioma));
-            audioSeleccionados.ForEach((a) => TituloService.CreateRelationAudio(t.IdTitulo, a.IdIdioma));
+            listaPreviaCategoriaSeleccionada = chkListCategorias.CheckedItems.OfType<Categoria>().ToList<Categoria>();
+            listaPreviaSubtituloSeleccionada = chkListSubtitulos.CheckedItems.OfType<Idioma>().ToList<Idioma>();
+            listaPreviaAudioSeleccionada = chkListAudio.CheckedItems.OfType<Idioma>().ToList<Idioma>();
+            listaPreviaCategoriaSeleccionada.ForEach((a) => TituloService.CreateRelationCategoria(t.IdTitulo, a.IdCategoria));
+            listaPreviaSubtituloSeleccionada.ForEach((a) => TituloService.CreateRelationSubtitulo(t.IdTitulo, a.IdIdioma));
+            listaPreviaAudioSeleccionada.ForEach((a) => TituloService.CreateRelationAudio(t.IdTitulo, a.IdIdioma));
             MessageBox.Show("Titulo ingresado");
             this.Close();
 

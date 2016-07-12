@@ -133,7 +133,7 @@ namespace Servicios.servicios
             String consulta = String.Format(
                 "update titulo set titulo='{1}',fecha='{2}',comentario='{3}', "
                 +"evaluacion={4},ubicacion='{5}',cantidad={6},id_tipo={7},"
-                +"id_clase={8} where id_tipo={0}", 
+                +"id_clase={8} where id_titulo={0}", 
                 titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamientoString, titulo.Comentarios, 
                 titulo.Evaluacion, titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
@@ -158,6 +158,17 @@ namespace Servicios.servicios
         {
             String consulta = String.Format("insert into titulo_categoria (id_titulo, id_categoria) values ({0}, {1})", idTitulo, idCategoria);
             ConexionDB db = new ConexionDB();
+            db.OperacionesNonQuery(consulta);
+        }
+
+        public static void DeleteRelations(Int32 idTitulo)
+        {
+            ConexionDB db = new ConexionDB();
+            String consulta = "delete from titulo_categoria where id_titulo=" + idTitulo;
+            db.OperacionesNonQuery(consulta);
+            consulta = "delete from titulo_idioma_aud where id_titulo=" + idTitulo;
+            db.OperacionesNonQuery(consulta);
+            consulta = "delete from titulo_idioma_sub where id_titulo=" + idTitulo;
             db.OperacionesNonQuery(consulta);
         }
 
