@@ -36,8 +36,6 @@
             this.executeSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTitulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeTitulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarTituloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarTituloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenedorDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,13 +52,12 @@
             this.fileToolStripMenuItem,
             this.developerToolStripMenuItem,
             this.verTitulosToolStripMenuItem,
-            this.editarToolStripMenuItem,
             this.eliminarToolStripMenuItem,
             this.mantenedorDelSistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(592, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(776, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,13 +66,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.fileToolStripMenuItem.Text = "Sistema";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.exitToolStripMenuItem.Text = "Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -85,20 +82,20 @@
             this.categoriaEIdiomaToolStripMenuItem,
             this.executeSQLToolStripMenuItem});
             this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.developerToolStripMenuItem.Text = "Ingresar";
             // 
             // categoriaEIdiomaToolStripMenuItem
             // 
             this.categoriaEIdiomaToolStripMenuItem.Name = "categoriaEIdiomaToolStripMenuItem";
-            this.categoriaEIdiomaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.categoriaEIdiomaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.categoriaEIdiomaToolStripMenuItem.Text = "Ingresar Titulo";
             this.categoriaEIdiomaToolStripMenuItem.Click += new System.EventHandler(this.categoriaEIdiomaToolStripMenuItem_Click_1);
             // 
             // executeSQLToolStripMenuItem
             // 
             this.executeSQLToolStripMenuItem.Name = "executeSQLToolStripMenuItem";
-            this.executeSQLToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.executeSQLToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.executeSQLToolStripMenuItem.Text = "Execute SQL";
             this.executeSQLToolStripMenuItem.Click += new System.EventHandler(this.ExecuteSql_Click);
             // 
@@ -107,43 +104,28 @@
             this.verTitulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaDeTitulosToolStripMenuItem});
             this.verTitulosToolStripMenuItem.Name = "verTitulosToolStripMenuItem";
-            this.verTitulosToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.verTitulosToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.verTitulosToolStripMenuItem.Text = "Ver Titulos";
             // 
             // listaDeTitulosToolStripMenuItem
             // 
             this.listaDeTitulosToolStripMenuItem.Name = "listaDeTitulosToolStripMenuItem";
-            this.listaDeTitulosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.listaDeTitulosToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.listaDeTitulosToolStripMenuItem.Text = "Lista de Titulos";
             this.listaDeTitulosToolStripMenuItem.Click += new System.EventHandler(this.listaDeTitulosToolStripMenuItem_Click);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarTituloToolStripMenuItem});
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // editarTituloToolStripMenuItem
-            // 
-            this.editarTituloToolStripMenuItem.Name = "editarTituloToolStripMenuItem";
-            this.editarTituloToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.editarTituloToolStripMenuItem.Text = "Editar Titulo";
-            this.editarTituloToolStripMenuItem.Click += new System.EventHandler(this.editarTituloToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eliminarTituloToolStripMenuItem});
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // eliminarTituloToolStripMenuItem
             // 
             this.eliminarTituloToolStripMenuItem.Name = "eliminarTituloToolStripMenuItem";
-            this.eliminarTituloToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.eliminarTituloToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.eliminarTituloToolStripMenuItem.Text = "Eliminar Titulo";
             this.eliminarTituloToolStripMenuItem.Click += new System.EventHandler(this.eliminarTituloToolStripMenuItem_Click);
             // 
@@ -152,13 +134,13 @@
             this.mantenedorDelSistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarCategoriaToolStripMenuItem});
             this.mantenedorDelSistemaToolStripMenuItem.Name = "mantenedorDelSistemaToolStripMenuItem";
-            this.mantenedorDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
+            this.mantenedorDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
             this.mantenedorDelSistemaToolStripMenuItem.Text = "Mantenedor del Sistema";
             // 
             // agregarCategoriaToolStripMenuItem
             // 
             this.agregarCategoriaToolStripMenuItem.Name = "agregarCategoriaToolStripMenuItem";
-            this.agregarCategoriaToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.agregarCategoriaToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.agregarCategoriaToolStripMenuItem.Text = "Agregar Categoria o Idioma";
             this.agregarCategoriaToolStripMenuItem.Click += new System.EventHandler(this.agregarCategoriaToolStripMenuItem_Click);
             // 
@@ -167,25 +149,26 @@
             this.pictureBox1.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.Biblioteca_Videoteca;
             this.pictureBox1.Image = global::TrabajoFinalTaller3.Properties.Resources.Biblioteca_Videoteca;
             this.pictureBox1.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.Biblioteca_Videoteca;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(572, 383);
+            this.pictureBox1.Size = new System.Drawing.Size(763, 471);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // Sistema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 416);
+            this.ClientSize = new System.Drawing.Size(776, 498);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(600, 443);
-            this.MinimumSize = new System.Drawing.Size(600, 443);
+            this.MaximumSize = new System.Drawing.Size(794, 536);
+            this.MinimumSize = new System.Drawing.Size(794, 536);
             this.Name = "Sistema";
             this.Text = "Sistema";
             this.menuStrip1.ResumeLayout(false);
@@ -204,13 +187,11 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem executeSQLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTitulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenedorDelSistemaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem categoriaEIdiomaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeTitulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarTituloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarTituloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarCategoriaToolStripMenuItem;
     }

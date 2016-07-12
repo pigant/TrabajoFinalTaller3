@@ -46,11 +46,6 @@ namespace TrabajoFinalTaller3
             MostrarForm mostrar = new MostrarForm();
             mostrar.ShowDialog(this); 
         }
-        private void editarTituloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Editar editar = new Editar();
-            editar.ShowDialog(this); 
-        }
         private void eliminarTituloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Eliminar eliminar = new Eliminar();

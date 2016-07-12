@@ -46,5 +46,20 @@ namespace TrabajoFinalTaller3
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lbxMostrar_MouseDoubleClick(null, null);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Titulo t = (Titulo)lbxMostrar.SelectedItem;
+            if (t != null)
+            {
+                EditarForm d = new EditarForm(t.IdTitulo);
+                d.Show();
+            }
+        }
     }
 }
