@@ -111,8 +111,7 @@ namespace Servicios.servicios
                 titulo.Evaluacion.ToString().Replace(',', '.'),
                 titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
-            Int32 id = db.OperacionesNonQueryReturnId(consulta);
-            titulo.IdTitulo = id;
+            titulo.IdTitulo = db.OperacionesNonQueryReturnId(consulta);
         }
         
         public static void delete(Int32 id)

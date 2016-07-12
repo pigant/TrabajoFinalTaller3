@@ -89,21 +89,21 @@ namespace Servicios.servicios
             return l;
         }
 
-        public static void create(Idioma idioma)
+        public static void Create(Idioma idioma)
         {
             String consulta = String.Format("insert into idioma (nombre) values ('{0}')", idioma.Nombre);
             ConexionDB db = new ConexionDB();
-            db.OperacionesNonQuery(consulta);
+            idioma.IdIdioma = db.OperacionesNonQueryReturnId(consulta);
         }
         
-        public static void delete(Int32 id)
+        public static void Delete(Int32 id)
         {
             String consulta = String.Format("delete from idioma where id_idioma={0}", id);
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);
         }
         
-        public static void update(Idioma idioma)
+        public static void Update(Idioma idioma)
         {
             String consulta = String.Format("update idioma set nombre='{1}' where id_idioma={0}", idioma.IdIdioma, idioma.Nombre);
             ConexionDB db = new ConexionDB();

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpDtos = new System.Windows.Forms.GroupBox();
+            this.txtEvaluacion = new System.Windows.Forms.NumericUpDown();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.chkListSubtitulos = new System.Windows.Forms.CheckedListBox();
             this.chkListAudio = new System.Windows.Forms.CheckedListBox();
             this.chkListCategorias = new System.Windows.Forms.CheckedListBox();
@@ -52,12 +54,10 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.txtEvaluacion = new System.Windows.Forms.NumericUpDown();
             this.grpDtos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvaluacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDtos
@@ -95,6 +95,52 @@
             this.grpDtos.TabStop = false;
             this.grpDtos.Text = "Ingrese los datos";
             this.grpDtos.Enter += new System.EventHandler(this.grpDtos_Enter);
+            // 
+            // txtEvaluacion
+            // 
+            this.txtEvaluacion.DecimalPlaces = 1;
+            this.txtEvaluacion.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.txtEvaluacion.Location = new System.Drawing.Point(496, 198);
+            this.txtEvaluacion.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.txtEvaluacion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtEvaluacion.Name = "txtEvaluacion";
+            this.txtEvaluacion.Size = new System.Drawing.Size(174, 22);
+            this.txtEvaluacion.TabIndex = 44;
+            this.txtEvaluacion.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.ForeColor = System.Drawing.Color.SlateGray;
+            this.txtCantidad.Location = new System.Drawing.Point(117, 194);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            64000,
+            0,
+            0,
+            0});
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(163, 22);
+            this.txtCantidad.TabIndex = 43;
+            this.txtCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chkListSubtitulos
             // 
@@ -312,7 +358,7 @@
             // pictureBox2
             // 
             this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
-            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.ImageLocation = "center";
             this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(16, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -320,52 +366,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(757, 143);
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.ForeColor = System.Drawing.Color.SlateGray;
-            this.txtCantidad.Location = new System.Drawing.Point(117, 194);
-            this.txtCantidad.Maximum = new decimal(new int[] {
-            64000,
-            0,
-            0,
-            0});
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(163, 22);
-            this.txtCantidad.TabIndex = 43;
-            this.txtCantidad.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // txtEvaluacion
-            // 
-            this.txtEvaluacion.DecimalPlaces = 1;
-            this.txtEvaluacion.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.txtEvaluacion.Location = new System.Drawing.Point(496, 198);
-            this.txtEvaluacion.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.txtEvaluacion.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtEvaluacion.Name = "txtEvaluacion";
-            this.txtEvaluacion.Size = new System.Drawing.Size(174, 22);
-            this.txtEvaluacion.TabIndex = 44;
-            this.txtEvaluacion.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
             // 
             // IngresarForm
             // 
@@ -384,9 +384,9 @@
             this.Load += new System.EventHandler(this.IngresarForm_Load);
             this.grpDtos.ResumeLayout(false);
             this.grpDtos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEvaluacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

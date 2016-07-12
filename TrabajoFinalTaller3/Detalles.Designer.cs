@@ -335,7 +335,7 @@
             // pictureBox2
             // 
             this.pictureBox2.ErrorImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
-            this.pictureBox2.Image = global::TrabajoFinalTaller3.Properties.Resources.banner;
+            this.pictureBox2.ImageLocation = "center";
             this.pictureBox2.InitialImage = global::TrabajoFinalTaller3.Properties.Resources.banner;
             this.pictureBox2.Location = new System.Drawing.Point(16, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
