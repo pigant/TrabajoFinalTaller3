@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Servicios.entidades;
+using Servicios.servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +26,36 @@ namespace TrabajoFinalTaller3
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Titulo t = (Titulo)lbxMostrar.SelectedItem;
+            DialogResult dialogResult = MessageBox.Show("Confirma desea eliminar? \n Esta accion no tiene vuelta atras", "Confirmar", MessageBoxButtons.YesNo);
+            
+            if (dialogResult == DialogResult.Yes)
+                {
+                    TituloService.delete(t.IdTitulo);
+                }
+            else if (dialogResult == DialogResult.No)
+                {
+                    //cancel;
+                }
+            List<Titulo> lista = TituloService.FindLike(txtBuscar.Text);
+            lbxMostrar.DataSource = lista;
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Titulo> lista = TituloService.FindLike(txtBuscar.Text);
+            lbxMostrar.DataSource = lista;
+        }
+        private void MostrarForm_Load(object sender, EventArgs e)
+        {
+            List<Titulo> lista = TituloService.FindAll();
+            var item = lbxMostrar.Items;
+            lista.ForEach((a) => item.Add(a));
         }
     }
 }
