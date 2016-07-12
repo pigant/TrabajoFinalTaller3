@@ -33,7 +33,7 @@ namespace Servicios.servicios
                 Int32 idTipo = (Int32) o[2];
                 String fechaLanzamiento = ((DateTime) o[3]).ToString();
                 String comentarios = (String) o[4];
-                Int32 evaluacion = Convert.ToInt32(o[5]);
+                Decimal evaluacion = Convert.ToDecimal(o[5]);
                 String ubicacion = (String) o[6];
                 Int32 cantidad = (Int32) o[7];
                 c = new Titulo(
@@ -60,7 +60,7 @@ namespace Servicios.servicios
                     Int32 idTipo = (Int32)o[3];
                     String fechaLanzamiento = ((DateTime)o[4]).ToString();
                     String comentarios = (String)o[5];
-                    Int32 evaluacion = Convert.ToInt32(o[6]);
+                    Decimal evaluacion = Convert.ToDecimal(o[6]);
                     String ubicacion = (String)o[7];
                     Int32 cantidad = (Int32)o[8];
                     Titulo t = new Titulo(
@@ -89,7 +89,7 @@ namespace Servicios.servicios
                     Int32 idTipo = (Int32)o[3];
                     String fechaLanzamiento = ((DateTime)o[4]).ToString();
                     String comentarios = (String)o[5];
-                    Int32 evaluacion = Convert.ToInt32(o[6]);
+                    Decimal evaluacion = Convert.ToDecimal(o[6]);
                     String ubicacion = (String)o[7];
                     Int32 cantidad = (Int32)o[8];
                     Titulo t = new Titulo(
@@ -108,7 +108,7 @@ namespace Servicios.servicios
                 "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
                 + "values ('{0}','{1}','{2}',{3},'{4}',{5},{6},{7})", 
                 titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
-                titulo.Evaluacion,
+                titulo.Evaluacion.ToString().Replace(',', '.'),
                 titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
             Int32 id = db.OperacionesNonQueryReturnId(consulta);

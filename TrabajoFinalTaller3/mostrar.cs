@@ -21,16 +21,15 @@ namespace TrabajoFinalTaller3
         private void MostrarForm_Load(object sender, EventArgs e)
         {
             List<Titulo> lista = TituloService.FindAll();
-            var item = lbxMostrar.Items;
-            lista.ForEach((a) => item.Add(a));
+            lista.Reverse();
+            lbxMostrar.DataSource = lista;
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            var item = lbxMostrar.Items;
             List<Titulo> lista = TituloService.FindLike(txtBuscar.Text);
-            item.Clear();
-            lista.ForEach((a) => item.Add(a));
+            lista.Reverse();
+            lbxMostrar.DataSource = lista;
         }
 
         private void lbxMostrar_MouseDoubleClick(object sender, MouseEventArgs e)
