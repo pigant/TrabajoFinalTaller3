@@ -40,7 +40,6 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblComentario = new System.Windows.Forms.Label();
             this.txtComentario = new System.Windows.Forms.TextBox();
-            this.cmbFecha = new System.Windows.Forms.DateTimePicker();
             this.cmbClase = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.lblClase = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.Titulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.grpDetalles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,6 +61,7 @@
             // 
             // grpDetalles
             // 
+            this.grpDetalles.Controls.Add(this.txtFecha);
             this.grpDetalles.Controls.Add(this.label3);
             this.grpDetalles.Controls.Add(this.label2);
             this.grpDetalles.Controls.Add(this.lblCategorias);
@@ -72,7 +73,6 @@
             this.grpDetalles.Controls.Add(this.txtCantidad);
             this.grpDetalles.Controls.Add(this.lblComentario);
             this.grpDetalles.Controls.Add(this.txtComentario);
-            this.grpDetalles.Controls.Add(this.cmbFecha);
             this.grpDetalles.Controls.Add(this.cmbClase);
             this.grpDetalles.Controls.Add(this.cmbTipo);
             this.grpDetalles.Controls.Add(this.lblClase);
@@ -115,9 +115,9 @@
             this.lblCategorias.AutoSize = true;
             this.lblCategorias.Location = new System.Drawing.Point(8, 323);
             this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(60, 13);
+            this.lblCategorias.Size = new System.Drawing.Size(57, 13);
             this.lblCategorias.TabIndex = 53;
-            this.lblCategorias.Text = "Comentario";
+            this.lblCategorias.Text = "Categorias";
             // 
             // listSubtitulos
             // 
@@ -185,13 +185,6 @@
             this.txtComentario.Name = "txtComentario";
             this.txtComentario.Size = new System.Drawing.Size(272, 51);
             this.txtComentario.TabIndex = 45;
-            // 
-            // cmbFecha
-            // 
-            this.cmbFecha.Location = new System.Drawing.Point(291, 91);
-            this.cmbFecha.Name = "cmbFecha";
-            this.cmbFecha.Size = new System.Drawing.Size(191, 20);
-            this.cmbFecha.TabIndex = 43;
             // 
             // cmbClase
             // 
@@ -306,6 +299,13 @@
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(292, 91);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(122, 20);
+            this.txtFecha.TabIndex = 54;
+            // 
             // DetallesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,7 +337,6 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblComentario;
         private System.Windows.Forms.TextBox txtComentario;
-        private System.Windows.Forms.DateTimePicker cmbFecha;
         private System.Windows.Forms.ComboBox cmbClase;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label lblClase;
@@ -356,5 +355,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

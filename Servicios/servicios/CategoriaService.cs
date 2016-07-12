@@ -18,6 +18,27 @@ namespace Servicios.servicios
         /* Definicion de metodos */
         /**********************************************************/
         #region
+
+        public static List<Categoria> findByTituloId(Int32 id)
+        {
+            List<Categoria> l = new List<Categoria>();
+            String comando = String.Format("select id_categoria, nombre from categoria join titulo_categoria on categoria.id_categoria=titulo_categoria.id_categoria where titulo_categoria.id_titulo={0}", id);
+            ConexionDB db = new ConexionDB();
+            List<Object[]> lista = db.ObtenerLista(comando);
+            if (lista.Count > 0)
+            {
+                foreach (Object[] o in lista)
+                {
+                    Int32 idCategoria = (Int32)o[0];
+                    String nombre = (String)o[1];
+                    Categoria c = new Categoria(idCategoria, nombre);
+                    l.Add(c);
+                }
+            }
+            return l;
+        }
+
+
         public static Categoria FindById(Int32 id)
         {
             Categoria c = null;

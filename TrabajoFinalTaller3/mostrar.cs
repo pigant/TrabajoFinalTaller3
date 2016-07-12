@@ -39,5 +39,10 @@ namespace TrabajoFinalTaller3
             DetallesForm d = new DetallesForm(t.IdTitulo);
             d.Show();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

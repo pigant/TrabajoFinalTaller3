@@ -11,7 +11,7 @@ CREATE TABLE [titulo] (
 
 [comentario] varchar(255) NULL,
 
-[evaluacion] varchar(255) NULL,
+[evaluacion] int NULL,
 
 [ubicacion] varchar(50) NULL,
 

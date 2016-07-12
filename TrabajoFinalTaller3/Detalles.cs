@@ -40,7 +40,10 @@ namespace TrabajoFinalTaller3
             txtComentario.Text = t.Comentarios;
             txtUbicacion.Text = t.Ubicacion;
             txtEvaluacion.Text = t.Evaluacion.ToString();
-            
+            txtFecha.Text = t.FechaLanzamiento.Split(' ')[0];
+            var itemCategorias = listCategorias.Items;
+            CategoriaService.findByTituloId(id).ForEach((a) => itemCategorias.Add(a));
+
         }
     }
 }
