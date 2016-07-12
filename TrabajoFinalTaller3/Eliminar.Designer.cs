@@ -33,6 +33,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lbxLista = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +78,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(422, 241);
+            this.btnVolver.Location = new System.Drawing.Point(422, 523);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 23);
             this.btnVolver.TabIndex = 6;
@@ -85,18 +86,27 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // lbxLista
+            // 
+            this.lbxLista.FormattingEnabled = true;
+            this.lbxLista.Location = new System.Drawing.Point(40, 225);
+            this.lbxLista.Name = "lbxLista";
+            this.lbxLista.Size = new System.Drawing.Size(510, 277);
+            this.lbxLista.TabIndex = 7;
+            // 
             // Eliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 279);
+            this.ClientSize = new System.Drawing.Size(592, 567);
             this.ControlBox = false;
+            this.Controls.Add(this.lbxLista);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(597, 306);
-            this.MinimumSize = new System.Drawing.Size(597, 306);
+            this.MaximumSize = new System.Drawing.Size(600, 594);
+            this.MinimumSize = new System.Drawing.Size(600, 594);
             this.Name = "Eliminar";
             this.Text = "Eliminar";
             this.Load += new System.EventHandler(this.Eliminar_Load);
@@ -114,5 +124,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.ListBox lbxLista;
     }
 }
