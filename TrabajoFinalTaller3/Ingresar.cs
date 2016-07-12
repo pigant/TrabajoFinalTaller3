@@ -61,8 +61,7 @@ namespace TrabajoFinalTaller3
             Clase clase = (Clase)cmbClase.SelectedItem;
             Int32 cantidad = -1;
             String cantidadTexto = txtCantidad.Text;
-            var fechaRaw = cmbFecha.Value;
-            String fecha = "" + fechaRaw.Year + '/' + fechaRaw.Month + '/' + fechaRaw.Day;
+            DateTime fecha = cmbFecha.Value;
             String ubicacion = txtUbicacion.Text;
             Decimal evaluacion;
             String evaluacionTexto = txtEvaluacion.Text;

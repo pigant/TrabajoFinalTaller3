@@ -31,7 +31,7 @@ namespace Servicios.servicios
                 String nombre = (String) o[0];
                 Int32 idClase = (Int32) o[1];
                 Int32 idTipo = (Int32) o[2];
-                String fechaLanzamiento = ((DateTime) o[3]).ToString();
+                DateTime fechaLanzamiento = (DateTime) o[3];
                 String comentarios = (String) o[4];
                 Decimal evaluacion = Convert.ToDecimal(o[5]);
                 String ubicacion = (String) o[6];
@@ -58,7 +58,7 @@ namespace Servicios.servicios
                     String nombre = (String)o[1];
                     Int32 idClase = (Int32)o[2];
                     Int32 idTipo = (Int32)o[3];
-                    String fechaLanzamiento = ((DateTime)o[4]).ToString();
+                    DateTime fechaLanzamiento = (DateTime)o[4];
                     String comentarios = (String)o[5];
                     Decimal evaluacion = Convert.ToDecimal(o[6]);
                     String ubicacion = (String)o[7];
@@ -87,7 +87,7 @@ namespace Servicios.servicios
                     String nombre = (String)o[1];
                     Int32 idClase = (Int32)o[2];
                     Int32 idTipo = (Int32)o[3];
-                    String fechaLanzamiento = ((DateTime)o[4]).ToString();
+                    DateTime fechaLanzamiento = (DateTime)o[4];
                     String comentarios = (String)o[5];
                     Decimal evaluacion = Convert.ToDecimal(o[6]);
                     String ubicacion = (String)o[7];
@@ -107,7 +107,7 @@ namespace Servicios.servicios
             String consulta = String.Format(
                 "insert into titulo (titulo, fecha, comentario, evaluacion, ubicacion, cantidad, id_tipo, id_clase) "
                 + "values ('{0}','{1}','{2}',{3},'{4}',{5},{6},{7})", 
-                titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.NombreTitulo, titulo.FechaLanzamientoString, titulo.Comentarios, 
                 titulo.Evaluacion.ToString().Replace(',', '.'),
                 titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
@@ -132,10 +132,10 @@ namespace Servicios.servicios
         public static void update(Titulo titulo)
         {
             String consulta = String.Format(
-                "update titulo set titulo='{1}',fecha='{2}',comentario='{3}, "
+                "update titulo set titulo='{1}',fecha='{2}',comentario='{3}', "
                 +"evaluacion={4},ubicacion='{5}',cantidad={6},id_tipo={7},"
                 +"id_clase={8} where id_tipo={0}", 
-                titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamiento, titulo.Comentarios, 
+                titulo.IdTitulo, titulo.NombreTitulo, titulo.FechaLanzamientoString, titulo.Comentarios, 
                 titulo.Evaluacion, titulo.Ubicacion, titulo.Cantidad, titulo.IdTipo, titulo.IdClase);
             ConexionDB db = new ConexionDB();
             db.OperacionesNonQuery(consulta);

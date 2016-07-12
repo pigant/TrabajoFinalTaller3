@@ -16,7 +16,7 @@ namespace Servicios.entidades
         private String nombreTitulo;
         private Int32 idClase;
         private Int32 idTipo;
-        private String fechaLanzamiento;
+        private DateTime fechaLanzamiento;
         private String comentarios;
         private Decimal evaluacion;
         private String ubicacion;
@@ -32,7 +32,7 @@ namespace Servicios.entidades
 
         }
 
-        public Titulo(String titulo, Int32 idClase, Int32 idTipo, String fechaLanzamiento, String comentarios, Decimal evaluacion, String ubicacion, Int32 cantidad)
+        public Titulo(String titulo, Int32 idClase, Int32 idTipo, DateTime fechaLanzamiento, String comentarios, Decimal evaluacion, String ubicacion, Int32 cantidad)
         {
             NombreTitulo = titulo;
             IdClase = idClase;
@@ -44,7 +44,7 @@ namespace Servicios.entidades
             Cantidad = cantidad;
         }
 
-        public Titulo(Int32 id, String titulo, Int32 idClase, Int32 idTipo, String fechaLanzamiento, String comentarios, Decimal evaluacion, String ubicacion, Int32 cantidad)
+        public Titulo(Int32 id, String titulo, Int32 idClase, Int32 idTipo, DateTime fechaLanzamiento, String comentarios, Decimal evaluacion, String ubicacion, Int32 cantidad)
         {
             IdTitulo = id;
             NombreTitulo = titulo;
@@ -114,7 +114,7 @@ namespace Servicios.entidades
             }
         }
 
-        public String FechaLanzamiento
+        public DateTime FechaLanzamiento
         {
             get
             {
@@ -124,6 +124,14 @@ namespace Servicios.entidades
             set
             {
                 fechaLanzamiento = value;
+            }
+        }
+        public String FechaLanzamientoString
+        {
+            get
+            {
+                String fecha = "" + fechaLanzamiento.Year + '/' + fechaLanzamiento.Month + '/' + fechaLanzamiento.Day;
+                return fecha;
             }
         }
 
