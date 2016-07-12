@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCategorias = new System.Windows.Forms.Label();
             this.listSubtitulos = new System.Windows.Forms.ListBox();
-            this.listIdiomas = new System.Windows.Forms.ListBox();
+            this.listAudio = new System.Windows.Forms.ListBox();
             this.listCategorias = new System.Windows.Forms.ListBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.grpDetalles.Controls.Add(this.label2);
             this.grpDetalles.Controls.Add(this.lblCategorias);
             this.grpDetalles.Controls.Add(this.listSubtitulos);
-            this.grpDetalles.Controls.Add(this.listIdiomas);
+            this.grpDetalles.Controls.Add(this.listAudio);
             this.grpDetalles.Controls.Add(this.listCategorias);
             this.grpDetalles.Controls.Add(this.btnCancelar);
             this.grpDetalles.Controls.Add(this.label1);
@@ -129,11 +129,11 @@
             // 
             // listIdiomas
             // 
-            this.listIdiomas.FormattingEnabled = true;
-            this.listIdiomas.Location = new System.Drawing.Point(150, 339);
-            this.listIdiomas.Name = "listIdiomas";
-            this.listIdiomas.Size = new System.Drawing.Size(133, 108);
-            this.listIdiomas.TabIndex = 50;
+            this.listAudio.FormattingEnabled = true;
+            this.listAudio.Location = new System.Drawing.Point(150, 339);
+            this.listAudio.Name = "listIdiomas";
+            this.listAudio.Size = new System.Drawing.Size(133, 108);
+            this.listAudio.TabIndex = 50;
             // 
             // listCategorias
             // 
@@ -350,7 +350,7 @@
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.ListBox listCategorias;
         private System.Windows.Forms.ListBox listSubtitulos;
-        private System.Windows.Forms.ListBox listIdiomas;
+        private System.Windows.Forms.ListBox listAudio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCategorias;

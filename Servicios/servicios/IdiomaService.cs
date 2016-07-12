@@ -18,6 +18,45 @@ namespace Servicios.servicios
         /* Definicion de metodos */
         /**********************************************************/
         #region
+
+        public static List<Idioma> FindAudioByTituloId(Int32 id)
+        {
+            List<Idioma> l = new List<Idioma>();
+            String comando = String.Format("select idioma.id_idioma, idioma.nombre from idioma join titulo_idioma_aud on idioma.id_idioma=titulo_idioma_aud.id_idioma where titulo_idioma_aud.id_titulo={0}", id);
+            ConexionDB db = new ConexionDB();
+            List<Object[]> lista = db.ObtenerLista(comando);
+            if (lista.Count > 0)
+            {
+                foreach (Object[] o in lista)
+                {
+                    Int32 idIdioma = (Int32)o[0];
+                    String nombre = (String)o[1];
+                    Idioma c = new Idioma(idIdioma, nombre);
+                    l.Add(c);
+                }
+            }
+            return l;
+        }
+
+        public static List<Idioma> FindSubtituloByTituloId(Int32 id)
+        {
+            List<Idioma> l = new List<Idioma>();
+            String comando = String.Format("select idioma.id_idioma, idioma.nombre from idioma join titulo_idioma_sub on idioma.id_idioma=titulo_idioma_sub.id_idioma where titulo_idioma_sub.id_titulo={0}", id);
+            ConexionDB db = new ConexionDB();
+            List<Object[]> lista = db.ObtenerLista(comando);
+            if (lista.Count > 0)
+            {
+                foreach (Object[] o in lista)
+                {
+                    Int32 idIdioma = (Int32)o[0];
+                    String nombre = (String)o[1];
+                    Idioma c = new Idioma(idIdioma, nombre);
+                    l.Add(c);
+                }
+            }
+            return l;
+        }
+
         public static Idioma FindById(Int32 id)
         {
             Idioma c = null;

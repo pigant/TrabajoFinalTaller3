@@ -22,7 +22,7 @@ namespace Servicios.servicios
         public static List<Categoria> findByTituloId(Int32 id)
         {
             List<Categoria> l = new List<Categoria>();
-            String comando = String.Format("select id_categoria, nombre from categoria join titulo_categoria on categoria.id_categoria=titulo_categoria.id_categoria where titulo_categoria.id_titulo={0}", id);
+            String comando = String.Format("select categoria.id_categoria, categoria.nombre from categoria join titulo_categoria on categoria.id_categoria=titulo_categoria.id_categoria where titulo_categoria.id_titulo={0}", id);
             ConexionDB db = new ConexionDB();
             List<Object[]> lista = db.ObtenerLista(comando);
             if (lista.Count > 0)
