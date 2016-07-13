@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresarForm));
             this.grpDtos = new System.Windows.Forms.GroupBox();
             this.txtEvaluacion = new System.Windows.Forms.NumericUpDown();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
@@ -96,14 +97,16 @@
             // 
             // txtEvaluacion
             // 
+            this.txtEvaluacion.BackColor = System.Drawing.Color.White;
             this.txtEvaluacion.DecimalPlaces = 1;
+            this.txtEvaluacion.ForeColor = System.Drawing.Color.Black;
             this.txtEvaluacion.Increment = new decimal(new int[] {
             5,
             0,
             0,
             65536});
             this.txtEvaluacion.Location = new System.Drawing.Point(372, 161);
-            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEvaluacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtEvaluacion.Maximum = new decimal(new int[] {
             5,
             0,
@@ -125,9 +128,10 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.ForeColor = System.Drawing.Color.SlateGray;
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
             this.txtCantidad.Location = new System.Drawing.Point(88, 158);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Maximum = new decimal(new int[] {
             64000,
             0,
@@ -175,6 +179,8 @@
             // 
             // cmbClase
             // 
+            this.cmbClase.BackColor = System.Drawing.Color.White;
+            this.cmbClase.ForeColor = System.Drawing.Color.Black;
             this.cmbClase.FormattingEnabled = true;
             this.cmbClase.Location = new System.Drawing.Point(88, 119);
             this.cmbClase.Name = "cmbClase";
@@ -183,6 +189,8 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.BackColor = System.Drawing.Color.White;
+            this.cmbTipo.ForeColor = System.Drawing.Color.Black;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(88, 83);
             this.cmbTipo.Name = "cmbTipo";
@@ -227,6 +235,8 @@
             // 
             // txtUbicacion
             // 
+            this.txtUbicacion.BackColor = System.Drawing.Color.White;
+            this.txtUbicacion.ForeColor = System.Drawing.Color.Black;
             this.txtUbicacion.Location = new System.Drawing.Point(373, 119);
             this.txtUbicacion.MaxLength = 50;
             this.txtUbicacion.Name = "txtUbicacion";
@@ -273,6 +283,11 @@
             // 
             // cmbFecha
             // 
+            this.cmbFecha.CalendarForeColor = System.Drawing.Color.Black;
+            this.cmbFecha.CalendarMonthBackground = System.Drawing.Color.White;
+            this.cmbFecha.CalendarTitleBackColor = System.Drawing.Color.Navy;
+            this.cmbFecha.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.cmbFecha.CalendarTrailingForeColor = System.Drawing.Color.Gray;
             this.cmbFecha.Location = new System.Drawing.Point(304, 84);
             this.cmbFecha.Name = "cmbFecha";
             this.cmbFecha.Size = new System.Drawing.Size(200, 20);
@@ -316,6 +331,8 @@
             // 
             // txtComentario
             // 
+            this.txtComentario.BackColor = System.Drawing.Color.White;
+            this.txtComentario.ForeColor = System.Drawing.Color.Black;
             this.txtComentario.Location = new System.Drawing.Point(24, 200);
             this.txtComentario.MaxLength = 255;
             this.txtComentario.Multiline = true;
@@ -325,6 +342,8 @@
             // 
             // txtTitulo
             // 
+            this.txtTitulo.BackColor = System.Drawing.Color.White;
+            this.txtTitulo.ForeColor = System.Drawing.Color.Black;
             this.txtTitulo.Location = new System.Drawing.Point(25, 41);
             this.txtTitulo.MaxLength = 100;
             this.txtTitulo.Name = "txtTitulo";
@@ -355,10 +374,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(590, 539);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.grpDtos);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(598, 566);
             this.MinimumSize = new System.Drawing.Size(598, 566);
