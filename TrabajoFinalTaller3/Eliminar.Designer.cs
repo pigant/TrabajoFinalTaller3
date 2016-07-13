@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Eliminar));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -62,6 +63,8 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Location = new System.Drawing.Point(30, 36);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(312, 20);
@@ -83,25 +86,27 @@
             this.btnVolver.Location = new System.Drawing.Point(422, 523);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(93, 23);
-            this.btnVolver.TabIndex = 6;
+            this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lbxMostrar
             // 
+            this.lbxMostrar.BackColor = System.Drawing.Color.White;
+            this.lbxMostrar.ForeColor = System.Drawing.Color.Black;
             this.lbxMostrar.FormattingEnabled = true;
             this.lbxMostrar.Location = new System.Drawing.Point(40, 225);
             this.lbxMostrar.Name = "lbxMostrar";
             this.lbxMostrar.Size = new System.Drawing.Size(510, 277);
-            this.lbxMostrar.TabIndex = 7;
+            this.lbxMostrar.TabIndex = 2;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(70, 523);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 23);
-            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar Seleccion";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -110,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(592, 567);
             this.ControlBox = false;
             this.Controls.Add(this.btnEliminar);
@@ -117,6 +123,8 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 594);
             this.MinimumSize = new System.Drawing.Size(600, 594);
